@@ -1,8 +1,5 @@
 <template>
   <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
     <div class="details">
       <h3>
         <slot name="heading"></slot>
@@ -13,5 +10,7 @@
 </template>
 
 <style scoped>
-
+  .details {
+    color: rgba(208, 105, 20, 0.678);
+  }
 </style>
