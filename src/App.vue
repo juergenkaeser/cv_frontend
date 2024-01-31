@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectList from './components/ProjectList.vue'
+  import ProjectList from './components/ProjectList.vue'
 </script>
 
 <template>
@@ -14,8 +14,8 @@ import ProjectList from './components/ProjectList.vue'
           <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
         </ul>
         <ul class="cv-list" aria-label="Education">
-          <li class="cv-list-item">Computer Science Expert Subject Area: Software Development (IHK)</li>
-          <li class="cv-list-item">Bachelor of Arts, Business administration</li>
+          <li class="cv-list-item">Computer Science Expert: Software Development (IHK)</li>
+          <li class="cv-list-item">Bachelor of Arts: Business administration</li>
         </ul>
         <ul class="cv-list" aria-label="Technologies">
           <li class="cv-list-item">Java</li>
@@ -35,10 +35,15 @@ import ProjectList from './components/ProjectList.vue'
   :root {
     --bg-color: #1a1a1a;
     --font-color-primary: #ffffff84;
-    --font-color-secondary: #29cac282;
+    --font-color-secondary: #29cac2b1;
     --spacing-small: 4px;
     --spacing-medium: 8px;
     --spacing-large: 16px;
+  }
+
+  #app {
+    display: block;
+    width: 100%;
   }
  
   body,
@@ -46,10 +51,6 @@ import ProjectList from './components/ProjectList.vue'
     margin: 0;
     background-color: var(--bg-color);
     color: var(--font-color-primary);
-  }
- 
-  .profile {
-    margin: var(--spacing-large);
   }
  
   .profile__name,
@@ -71,14 +72,14 @@ import ProjectList from './components/ProjectList.vue'
   ul {
     padding: 0;
     margin: var(--spacing-large) 0 0 0;
-  }
- 
-  ul:before{
-    content: attr(aria-label);
-    font-size: 120%;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--font-color-secondary);
+
+    &:before {
+      content: attr(aria-label);
+      font-size: 120%;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--font-color-secondary);
+    }
   }
  
   li {
