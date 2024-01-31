@@ -33,9 +33,9 @@ import ProjectList from './components/ProjectList.vue'
 
 <style lang="scss">
   :root {
-    --bg-color: #2e294e;
-    --font-color-primary: #f46036;
-    --font-color-secondary: #1b998b;
+    --bg-color: #1a1a1a;
+    --font-color-primary: #ffffff84;
+    --font-color-secondary: #29cac282;
     --spacing-small: 4px;
     --spacing-medium: 8px;
     --spacing-large: 16px;
@@ -57,6 +57,11 @@ import ProjectList from './components/ProjectList.vue'
     margin-block-start: 0;
     margin-block-end: 0;
   }
+
+  .profile__name {
+    color: var(--font-color-secondary);
+    font-weight: bold;
+  }
  
   .profile__profession {
     margin-top: var(--spacing-medium);
@@ -73,6 +78,7 @@ import ProjectList from './components/ProjectList.vue'
     font-size: 120%;
     font-weight: bold;
     font-style: italic;
+    color: var(--font-color-secondary);
   }
  
   li {

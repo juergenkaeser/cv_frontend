@@ -11,6 +11,9 @@
 
 <style lang="scss">
   .details {
-    //color: rgba(208, 105, 20, 0.678);
+    h3 {
+      color: var(--font-color-secondary);
+      font-weight: bold;
+    }
   }
 </style>
