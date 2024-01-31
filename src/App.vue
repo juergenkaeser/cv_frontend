@@ -4,10 +4,80 @@ import ProjectList from './components/ProjectList.vue'
 
 <template>
   <main>
+    <div class="profile">
+      <h2 class="profile__name">Jürgen Käser</h2>
+      <p class="profile__profession">Software Engineer</p>
+      <div class="cv-lists">
+        <ul class="cv-list" aria-label="Professional experience">
+          <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
+          <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year)</li>
+          <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
+        </ul>
+        <ul class="cv-list" aria-label="Education">
+          <li class="cv-list-item">Computer Science Expert Subject Area: Software Development (IHK)</li>
+          <li class="cv-list-item">Bachelor of Arts, Business administration</li>
+        </ul>
+        <ul class="cv-list" aria-label="Technologies">
+          <li class="cv-list-item">Java</li>
+          <li class="cv-list-item">SQL</li>
+          <li class="cv-list-item">JavaScript / TypeScrpt</li>
+          <li class="cv-list-item">CSS / SCSS</li>
+          <li class="cv-list-item">HTML</li>
+          <li class="cv-list-item">Vue.js</li>
+        </ul>
+      </div>
+    </div>
     <ProjectList />
   </main>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+  :root {
+    --bg-color: #2e294e;
+    --font-color-primary: #f46036;
+    --font-color-secondary: #1b998b;
+    --spacing-small: 4px;
+    --spacing-medium: 8px;
+    --spacing-large: 16px;
+  }
+ 
+  body,
+  #app {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--font-color-primary);
+  }
+ 
+  .profile {
+    margin: var(--spacing-large);
+  }
+ 
+  .profile__name,
+  .profile__profession {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+ 
+  .profile__profession {
+    margin-top: var(--spacing-medium);
+    font-style: italic;
+  }
+ 
+  ul {
+    padding: 0;
+    margin: var(--spacing-large) 0 0 0;
+  }
+ 
+  ul:before{
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    font-style: italic;
+  }
+ 
+  li {
+    list-style-type: none;
+    margin-bottom: var(--spacing-small);
+    padding-left: var(--spacing-medium);
+  }
 </style>

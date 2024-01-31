@@ -9,8 +9,8 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
   .details {
-    color: rgba(208, 105, 20, 0.678);
+    //color: rgba(208, 105, 20, 0.678);
   }
 </style>
