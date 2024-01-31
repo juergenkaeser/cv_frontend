@@ -10,7 +10,7 @@ import ProjectList from './components/ProjectList.vue'
       <div class="cv-lists">
         <ul class="cv-list" aria-label="Professional experience">
           <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
-          <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year)</li>
+          <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
           <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
         </ul>
         <ul class="cv-list" aria-label="Education">
