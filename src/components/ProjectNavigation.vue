@@ -1,8 +1,8 @@
 <template>
   <ul class="navigation" ref="navigation" role="navigation">
-    <li class="navigation-element" @click="$emit('navi-profile-click')">About me</li>
-    <li class="navigation-element" @click="$emit('navi-cv-click')">Curriculum Vitae</li>
-    <li class="navigation-element" @click="$emit('navi-projects-click')">Projects</li>
+    <li class="navigation-element" @click="$emit('navi-0-click')">About me</li>
+    <li class="navigation-element" @click="$emit('navi-1-click')">Curriculum Vitae</li>
+    <li class="navigation-element" @click="$emit('navi-2-click')">Projects</li>
   </ul>
 </template>
  

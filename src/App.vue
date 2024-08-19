@@ -3,7 +3,7 @@
   import ProjectList from './components/ProjectList.vue'
   import { ref } from 'vue'
 
-  const profile = ref()
+  const me = ref()
   const cv = ref()
   const projects = ref()
 
@@ -15,11 +15,11 @@
 <template>
   <main>
     <ProjectNavigation
-    @navi-profile-click="naviClick(profile)"
-    @navi-cv-click="naviClick(cv)"
-    @navi-projects-click="naviClick(projects)"
+    @navi-0-click="naviClick(me)"
+    @navi-1-click="naviClick(cv)"
+    @navi-2-click="naviClick(projects)"
     />
-    <div class="profile" ref="profile">
+    <div class="profile" ref="me">
       <h2 class="profile__name">Jürgen Käser</h2>
       <p class="profile__profession">Software Engineer</p>
       <div class="cv-lists">
@@ -27,9 +27,10 @@
           <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
           <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
           <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
+          <li class="cv-list-item">Working Student IT - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
         </ul>
         <ul class="cv-list" aria-label="Education">
-          <li class="cv-list-item">Computer Science Expert Subject Area: Software Development (IHK)</li>
+          <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
           <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
         </ul>
         <ul class="cv-list" aria-label="Technologies">
