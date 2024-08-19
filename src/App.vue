@@ -1,9 +1,28 @@
 <script setup lang="ts">
+  import ProjectNavigation from './components/ProjectNavigation.vue'
   import ProjectList from './components/ProjectList.vue'
+  import { ref } from 'vue'
+
+  const profile = ref()
+  const cv = ref()
+  const projects = ref()
+
+  // TODO: add type
+  function naviClick(e) {
+    console.log(e);
+    
+    e.scrollIntoView({ behavior: "smooth" });
+  };
 </script>
+
 <template>
   <main>
-    <div class="profile">
+    <ProjectNavigation
+    @navi-profile-click="naviClick(profile)"
+    @navi-cv-click="naviClick(cv)"
+    @navi-projects-click="naviClick(projects)"
+    />
+    <div class="profile" ref="profile">
       <h2 class="profile__name">Jürgen Käser</h2>
       <p class="profile__profession">Software Engineer</p>
       <div class="cv-lists">
@@ -26,7 +45,28 @@
         </ul>
       </div>
     </div>
-    <ProjectList />
+    <div class="cv" ref="cv">
+      CV Test
+    </div>
+    <div class="project-slider" ref="projects">
+      <ProjectList />
+    </div>
+    
+    <!-- TODO: Make me work!    
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">0</li>
+          <li class="glide__slide">1</li>
+          <li class="glide__slide">2</li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+      </div>
+    </div> -->
+    
   </main>
 </template>
 
@@ -38,6 +78,7 @@
     --spacing-small: 4px;
     --spacing-medium: 8px;
     --spacing-large: 16px;
+    --navi-padding: 40px;
   }
 
   #app {
@@ -50,6 +91,10 @@
     margin: 0;
     background-color: var(--bg-color);
     color: var(--font-color-primary);
+  }
+
+  .profile {
+    padding-top: var(--navi-padding);
   }
  
   .profile__name,
@@ -66,6 +111,15 @@
   .profile__profession {
     margin-top: var(--spacing-medium);
     font-style: italic;
+  }
+
+  .cv {
+    background-color: grey;
+    height: 100vh;
+    line-height: 100vh;
+    vertical-align: center;
+    text-align: center;
+    font-size: 32px;
   }
  
   ul {
