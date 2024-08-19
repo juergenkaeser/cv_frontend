@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import ProjectList from './components/ProjectList.vue'
 </script>
-
 <template>
   <main>
     <div class="profile">
@@ -14,13 +13,13 @@
           <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
         </ul>
         <ul class="cv-list" aria-label="Education">
-          <li class="cv-list-item">Computer Science Expert: Software Development (IHK)</li>
-          <li class="cv-list-item">Bachelor of Arts: Business administration</li>
+          <li class="cv-list-item">Computer Science Expert Subject Area: Software Development (IHK)</li>
+          <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
         </ul>
         <ul class="cv-list" aria-label="Technologies">
           <li class="cv-list-item">Java</li>
           <li class="cv-list-item">SQL</li>
-          <li class="cv-list-item">JavaScript / TypeScrpt</li>
+          <li class="cv-list-item">JavaScript / TypeScript</li>
           <li class="cv-list-item">CSS / SCSS</li>
           <li class="cv-list-item">HTML</li>
           <li class="cv-list-item">Vue.js</li>
