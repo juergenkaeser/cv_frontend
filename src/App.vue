@@ -7,10 +7,7 @@
   const cv = ref()
   const projects = ref()
 
-  // TODO: add type
-  function naviClick(e) {
-    console.log(e);
-    
+  function naviClick(e: Element) {
     e.scrollIntoView({ behavior: "smooth" });
   };
 </script>
@@ -66,7 +63,7 @@
         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
       </div>
     </div> -->
-    
+
   </main>
 </template>
 
