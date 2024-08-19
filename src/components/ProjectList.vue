@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import ProjectItem from './ProjectItem.vue'
+  import ProjectItem from './ProjectItem.vue'
 </script>
 
 <template>
   <ProjectItem>
-    <template #heading>Service Funnel</template>
+    <template #headline>Headline</template>
+    <template #subline>Subline</template>
 
-    This project is ...
+    content
   </ProjectItem>
 </template>
