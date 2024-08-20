@@ -15,38 +15,35 @@
 <template>
   <main>
     <ProjectNavigation
-    @navi-0-click="naviClick(me)"
-    @navi-1-click="naviClick(cv)"
-    @navi-2-click="naviClick(projects)"
+      @navi-0-click="naviClick(me)"
+      @navi-1-click="naviClick(cv)"
+      @navi-2-click="naviClick(projects)"
     />
     <div class="profile" ref="me">
       <h2 class="profile__name">Jürgen Käser</h2>
       <p class="profile__profession">Software Engineer</p>
-      <div class="cv-lists">
-        <ul class="cv-list" aria-label="Professional experience">
-          <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
-          <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
-          <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
-          <li class="cv-list-item">Working Student IT - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
-        </ul>
-        <ul class="cv-list" aria-label="Education">
-          <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
-          <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
-        </ul>
-        <ul class="cv-list" aria-label="Technologies">
-          <li class="cv-list-item">Java</li>
-          <li class="cv-list-item">SQL</li>
-          <li class="cv-list-item">JavaScript / TypeScript</li>
-          <li class="cv-list-item">CSS / SCSS</li>
-          <li class="cv-list-item">HTML</li>
-          <li class="cv-list-item">Vue.js</li>
-        </ul>
-      </div>
     </div>
     <div class="cv" ref="cv">
-      CV Test
+      <ul class="cv-list" aria-label="Professional experience">
+        <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
+        <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
+        <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
+        <li class="cv-list-item">Working Student IT - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
+      </ul>
+      <ul class="cv-list" aria-label="Education">
+        <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
+        <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
+      </ul>
+      <ul class="cv-list" aria-label="Technologies">
+        <li class="cv-list-item">Java</li>
+        <li class="cv-list-item">SQL</li>
+        <li class="cv-list-item">JavaScript / TypeScript</li>
+        <li class="cv-list-item">CSS / SCSS</li>
+        <li class="cv-list-item">HTML</li>
+        <li class="cv-list-item">Vue.js</li>
+      </ul>
     </div>
-    <div class="project-slider" ref="projects">
+    <div class="projects" ref="projects">
       <ProjectList />
     </div>
     
@@ -73,6 +70,9 @@
     --bg-color: #1a1a1a;
     --font-color-primary: #ffffff84;
     --font-color-secondary: #29cac2b1;
+    --font-size-1: 16px;
+    --font-size-2: 20px;
+    --font-size-3: 24px;
     --spacing-small: 4px;
     --spacing-medium: 8px;
     --spacing-large: 16px;
@@ -91,33 +91,33 @@
     color: var(--font-color-primary);
   }
 
-  .profile {
+  .profile,
+  .cv,
+  .projects {
     padding-top: var(--navi-padding);
-  }
- 
-  .profile__name,
-  .profile__profession {
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  .profile__name {
-    color: var(--font-color-secondary);
-    font-weight: bold;
-  }
- 
-  .profile__profession {
-    margin-top: var(--spacing-medium);
-    font-style: italic;
-  }
-
-  .cv {
-    background-color: grey;
     height: 100vh;
-    line-height: 100vh;
-    vertical-align: center;
-    text-align: center;
-    font-size: 32px;
+  }
+
+  .profile {
+    background-image: url(https://placehold.co/1920x1080/31343C/EEE);
+    background-position: center;
+    background-size: contain;
+
+    .profile__name,
+    .profile__profession {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    .profile__name {
+      color: var(--font-color-secondary);
+      font-weight: bold;
+    }
+  
+    .profile__profession {
+      margin-top: var(--spacing-medium);
+      font-style: italic;
+    }
   }
  
   ul {

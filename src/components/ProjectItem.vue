@@ -25,7 +25,7 @@
   }
  
   .project-item__subline {
-    margin-top: 4px;
+    margin-top: var(--spacing-small);
     font-style: italic;
   }
 </style>

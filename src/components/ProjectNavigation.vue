@@ -16,17 +16,17 @@
     display: flex;
     justify-content: space-between;
     width: calc(100% - 64px);
-    margin: 4px 32px;
+    margin: var(--spacing-small) 32px;
     padding-inline-start: 0;
     list-style-type: none;
-    border-radius: 4px;
+    border-radius: var(--spacing-small);
   }
  
   .navigation-element {
     width: calc(100% / 3);
     text-align: center;
     background-color: inherit;
-    border-radius: 4px;
+    border-radius: var(--spacing-small);
     transition: background-color 200ms ease-in-out;
     margin-bottom: 0;
     padding-left: 0;
