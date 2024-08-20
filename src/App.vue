@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Navigation from './components/StickyNavigation.vue'
   import Profile from './components/MyProfile.vue'
+  import CurriculumVitae from './components/CurriculumVitae.vue';
   import ProjectList from './components/ProjectList.vue'
   import { ref } from 'vue'
 
@@ -24,24 +25,7 @@
       <Profile />
     </div>
     <div class="cv" ref="cv">
-      <ul class="cv-list" aria-label="Professional experience">
-        <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
-        <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
-        <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
-        <li class="cv-list-item">Working Student IT - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
-      </ul>
-      <ul class="cv-list" aria-label="Education">
-        <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
-        <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
-      </ul>
-      <ul class="cv-list" aria-label="Technologies">
-        <li class="cv-list-item">Java</li>
-        <li class="cv-list-item">SQL</li>
-        <li class="cv-list-item">JavaScript / TypeScript</li>
-        <li class="cv-list-item">CSS / SCSS</li>
-        <li class="cv-list-item">HTML</li>
-        <li class="cv-list-item">Vue.js</li>
-      </ul>
+      <CurriculumVitae />
     </div>
     <div class="projects" ref="projects">
       <ProjectList />
