@@ -3,6 +3,7 @@
   import Profile from './components/MyProfile.vue'
   import CurriculumVitae from './components/CurriculumVitae.vue';
   import ProjectList from './components/ProjectList.vue'
+  import Impressum from './components/MyImpressum.vue'
   import { ref } from 'vue'
 
   const me = ref()
@@ -30,6 +31,7 @@
     <div class="projects" ref="projects">
       <ProjectList />
     </div>
+    <Impressum />
   </main>
 </template>
 
