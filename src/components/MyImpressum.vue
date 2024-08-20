@@ -1,5 +1,7 @@
 <template>
     <div class='impressum'>
+        <p @click="$emit('hide-impressum')">Zurück</p>
+        <br>
         <h1>Impressum</h1>
         <p>Angaben gemäß § 5 DDG</p>
         <p>Max Muster</p>

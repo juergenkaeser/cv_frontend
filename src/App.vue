@@ -9,29 +9,44 @@
   const me = ref()
   const cv = ref()
   const projects = ref()
+  const impressumHidden = ref(false)
 
   function naviClick(e: Element) {
     e.scrollIntoView({ behavior: "smooth" });
   };
+
+  // TODO: Impressum should be scrolled to the top before shown
+  function showImpressum() {
+    impressumHidden.value = false
+  }
+
+  function hideImpressum() {
+    impressumHidden.value = true
+  }
 </script>
 
 <template>
   <main>
-    <Navigation
-      @navi-0-click="naviClick(me)"
-      @navi-1-click="naviClick(cv)"
-      @navi-2-click="naviClick(projects)"
-    />
-    <div class="profile" ref="me">
-      <Profile />
+    <div class="content-wrapper" v-if="impressumHidden">
+      <Navigation
+        @navi-0-click="naviClick(me)"
+        @navi-1-click="naviClick(cv)"
+        @navi-2-click="naviClick(projects)"
+      />
+      <div class="profile" ref="me">
+        <Profile />
+      </div>
+      <div class="cv" ref="cv">
+        <CurriculumVitae />
+      </div>
+      <div class="projects" ref="projects">
+        <ProjectList />
+      </div>
+      <div @click="showImpressum()">Impressum</div>
     </div>
-    <div class="cv" ref="cv">
-      <CurriculumVitae />
+    <div class="impressum" ref="impressum" v-else>
+      <Impressum @hide-impressum="hideImpressum()"/>
     </div>
-    <div class="projects" ref="projects">
-      <ProjectList />
-    </div>
-    <Impressum />
   </main>
 </template>
 
@@ -66,6 +81,10 @@
   .projects {
     padding-top: var(--navi-padding);
     height: 100vh;
+  }
+
+  .impressum {
+    padding-top: var(--navi-padding);
   }
  
   ul {
