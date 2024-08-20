@@ -1,20 +1,27 @@
 <template>
   <div class="project-item">
-    <div class="details">
-      <h3 class="project-item__headline">
-        <slot name="headline"></slot>
-      </h3>
-      <h4 class="project-item__subline">
-        <slot name="subline"></slot>
-      </h4>
-      <p class="project-item__content">
-        <slot></slot>
-      </p>
-    </div>
+    <h3 class="project-item__headline">
+      <slot name="headline"></slot>
+    </h3>
+    <h4 class="project-item__subline">
+      <slot name="subline"></slot>
+    </h4>
+    <p class="project-item__content">
+      <slot></slot>
+    </p>
   </div>
 </template>
 
 <style lang="scss">
+  .project-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .project-item__headline,
   .project-item__subline {
     color: var(--font-color-secondary);

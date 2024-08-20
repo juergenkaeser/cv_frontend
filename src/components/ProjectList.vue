@@ -52,7 +52,7 @@
       height: 90%;
 
       .glide__slides {
-        text-align: center;
+        height: 100%;
       }
     }
 
