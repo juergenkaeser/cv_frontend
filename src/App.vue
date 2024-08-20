@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import ProjectNavigation from './components/ProjectNavigation.vue'
+  import Navigation from './components/Navigation.vue'
   import ProjectList from './components/ProjectList.vue'
   import { ref } from 'vue'
 
@@ -14,7 +14,7 @@
 
 <template>
   <main>
-    <ProjectNavigation
+    <Navigation
       @navi-0-click="naviClick(me)"
       @navi-1-click="naviClick(cv)"
       @navi-2-click="naviClick(projects)"
