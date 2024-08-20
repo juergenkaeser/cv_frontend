@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import Navigation from './components/Navigation.vue'
+  import Navigation from './components/StickyNavigation.vue'
+  import Profile from './components/MyProfile.vue'
   import ProjectList from './components/ProjectList.vue'
   import { ref } from 'vue'
 
@@ -20,8 +21,7 @@
       @navi-2-click="naviClick(projects)"
     />
     <div class="profile" ref="me">
-      <h2 class="profile__name">Jürgen Käser</h2>
-      <p class="profile__profession">Software Engineer</p>
+      <Profile />
     </div>
     <div class="cv" ref="cv">
       <ul class="cv-list" aria-label="Professional experience">
@@ -96,28 +96,6 @@
   .projects {
     padding-top: var(--navi-padding);
     height: 100vh;
-  }
-
-  .profile {
-    background-image: url(https://placehold.co/1920x1080/31343C/EEE);
-    background-position: center;
-    background-size: contain;
-
-    .profile__name,
-    .profile__profession {
-      margin-block-start: 0;
-      margin-block-end: 0;
-    }
-
-    .profile__name {
-      color: var(--font-color-secondary);
-      font-weight: bold;
-    }
-  
-    .profile__profession {
-      margin-top: var(--spacing-medium);
-      font-style: italic;
-    }
   }
  
   ul {
