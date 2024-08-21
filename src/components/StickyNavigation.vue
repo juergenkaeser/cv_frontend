@@ -8,29 +8,27 @@
  
 <style>
   .navigation {
+    height: var(--navi-padding);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
     background-color: var(--font-color-secondary);
     display: flex;
-    justify-content: space-between;
-    width: calc(100% - 64px);
-    margin: var(--spacing-s) 32px;
+    width: 100%;
     padding-inline-start: 0;
-    list-style-type: none;
-    border-radius: var(--spacing-s);
+    list-style-type: none;  
   }
  
   .navigation-element {
     width: calc(100% / 3);
     text-align: center;
     background-color: inherit;
-    border-radius: var(--spacing-s);
     transition: background-color 200ms ease-in-out;
     margin-bottom: 0;
-    padding-left: 0;
+    padding: var(--spacing-m);
     color: white;
+    font-size: var(--font-size-navi);
     font-weight: bold;
     user-select: none;
   }
