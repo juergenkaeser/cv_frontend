@@ -78,6 +78,7 @@
     --spacing-xl: 40px;
     --spacing-xxl: 80px;
     --navi-padding: 40px;
+    --font-size-navi: 16px;
   }
 
   #app {
