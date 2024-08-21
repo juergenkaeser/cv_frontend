@@ -73,8 +73,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 80px;
-        height: 80px;
+        width: var(--spacing-xxl);
+        height: var(--spacing-xxl);
         color: white;
 
         &.glide__arrow--left {

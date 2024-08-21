@@ -24,7 +24,7 @@
     }
   
     .profile__profession {
-      margin-top: var(--spacing-medium);
+      margin-top: var(--spacing-m);
       font-style: italic;
     }
   }

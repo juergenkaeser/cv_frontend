@@ -32,7 +32,7 @@
   }
  
   .project-item__subline {
-    margin-top: var(--spacing-small);
+    margin-top: var(--spacing-s);
     font-style: italic;
   }
 </style>

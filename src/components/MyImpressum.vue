@@ -33,9 +33,9 @@
 <style>
 .hide-impressum {
     width: fit-content;
-    padding: var(--spacing-medium);
+    padding: var(--spacing-m);
     border: 2px solid var(--font-color-primary);
-    border-radius: var(--spacing-small);
+    border-radius: var(--spacing-s);
 
     &:hover {
         cursor: pointer;

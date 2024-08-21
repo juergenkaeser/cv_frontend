@@ -72,10 +72,11 @@
     --font-size-1: 16px;
     --font-size-2: 20px;
     --font-size-3: 24px;
-    --spacing-small: 4px;
-    --spacing-medium: 8px;
-    --spacing-large: 16px;
-    --spacing-extra-large: 40px;
+    --spacing-s: 4px;
+    --spacing-m: 8px;
+    --spacing-l: 16px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 80px;
     --navi-padding: 40px;
   }
 
@@ -126,7 +127,7 @@
  
   li {
     list-style-type: none;
-    margin-bottom: var(--spacing-small);
-    padding-left: var(--spacing-medium);
+    margin-bottom: var(--spacing-s);
+    padding-left: var(--spacing-m);
   }
 </style>
