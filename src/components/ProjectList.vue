@@ -63,7 +63,7 @@
         height: 100%;
 
         .glide__slide {
-          padding: 0 120px;
+          padding: 0 var(--spacing-xxl);
         }
       }
     }

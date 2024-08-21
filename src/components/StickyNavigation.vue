@@ -32,6 +32,7 @@
     padding-left: 0;
     color: white;
     font-weight: bold;
+    user-select: none;
   }
  
   .navigation-element:hover {

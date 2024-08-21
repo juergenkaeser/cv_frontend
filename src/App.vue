@@ -4,7 +4,7 @@
   import CurriculumVitae from './components/CurriculumVitae.vue';
   import ProjectList from './components/ProjectList.vue'
   import Impressum from './components/MyImpressum.vue'
-  import { onMounted, ref } from 'vue'
+  import { ref } from 'vue'
 
   const me = ref()
   const cv = ref()
