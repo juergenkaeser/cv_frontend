@@ -1,6 +1,6 @@
 <template>
     <div class='impressum'>
-        <p @click="$emit('hide-impressum')">Zurück</p>
+        <p class="hide-impressum" tabindex="0" role="button" @click="$emit('hide-impressum')">Zurück</p>
         <br>
         <h1>Impressum</h1>
         <p>Angaben gemäß § 5 DDG</p>
@@ -29,3 +29,17 @@
         <p>Website Impressum erstellt durch <a href="https://www.impressum-generator.de" target="_blank">impressum-generator.de</a> von der <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Kanzlei Hasselbach</a></p> 
     </div>
 </template>
+
+<style>
+.hide-impressum {
+    width: fit-content;
+    padding: var(--spacing-medium);
+    border: 2px solid var(--font-color-primary);
+    border-radius: var(--spacing-small);
+
+    &:hover {
+        cursor: pointer;
+        background-color: grey;
+    }
+}
+</style>

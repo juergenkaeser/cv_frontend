@@ -4,20 +4,34 @@
   import CurriculumVitae from './components/CurriculumVitae.vue';
   import ProjectList from './components/ProjectList.vue'
   import Impressum from './components/MyImpressum.vue'
-  import { ref } from 'vue'
+  import { onMounted, ref } from 'vue'
 
   const me = ref()
   const cv = ref()
   const projects = ref()
-  const impressumHidden = ref(false)
+  const impressumHidden = ref(true)
+
+  /* TODO: Make me work for A11Y
+  const showImpressumBtn = ref()
+  onMounted(() => {
+    showImpressumBtn.value.addEventListener('keydown', function(event) {
+      if (event.keyCode === 'ENTER' || event.keyCode === 'SPACE') {
+          event.preventDefault(); // Prevents unintentional form submissions, page scrollings, the like
+          showImpressum();
+      }
+    });
+  }) */
 
   function naviClick(e: Element) {
     e.scrollIntoView({ behavior: "smooth" });
   };
 
-  // TODO: Impressum should be scrolled to the top before shown
   function showImpressum() {
     impressumHidden.value = false
+    let element = document.getElementById("app");
+    if (element) {
+      element.scrollIntoView();
+    }
   }
 
   function hideImpressum() {
@@ -42,7 +56,7 @@
       <div class="projects" ref="projects">
         <ProjectList />
       </div>
-      <div @click="showImpressum()">Impressum</div>
+      <div class="show-impressum" tabindex="0" ref="showImpressumBtn" role="button" @click="showImpressum()">Impressum</div>
     </div>
     <div class="impressum" ref="impressum" v-else>
       <Impressum @hide-impressum="hideImpressum()"/>
@@ -81,6 +95,15 @@
   .projects {
     padding-top: var(--navi-padding);
     height: 100vh;
+  }
+
+  .show-impressum {
+    margin: 0 auto;
+    width: fit-content;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .impressum {
