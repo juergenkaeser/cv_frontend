@@ -75,6 +75,7 @@
     --spacing-small: 4px;
     --spacing-medium: 8px;
     --spacing-large: 16px;
+    --spacing-extra-large: 40px;
     --navi-padding: 40px;
   }
 
