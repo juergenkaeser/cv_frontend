@@ -66,6 +66,7 @@
 
 <style lang="scss">
   :root {
+    --breakpoint-desktop: 768px;
     --bg-color: #1a1a1a;
     --font-color-primary: #ffffff84;
     --font-color-secondary: #29cac2b1;
@@ -77,8 +78,10 @@
     --spacing-l: 16px;
     --spacing-xl: 40px;
     --spacing-xxl: 80px;
-    --navi-padding: 40px;
-    --font-size-navi: 16px;
+    --navi-height-mobile: 28px;
+    --navi-height-desktop: 40px;
+    --font-size-navi-mobile: 12px;
+    --font-size-navi-desktop: 16px;
   }
 
   #app {
@@ -96,8 +99,22 @@
   .profile,
   .cv,
   .projects {
-    padding-top: var(--navi-padding);
+    padding-top: var(--navi-height-mobile);
+
+    @media (min-width: var(--breakpoint-desktop)) {
+      padding-top: var(--navi-height-desktop);
+    }
+  }
+
+  .profile {
     height: 100vh;
+  }
+
+  .cv,
+  .projects {
+    @media (min-width: var(--breakpoint-desktop)) {
+      height: 100vh;
+    }
   }
 
   .show-impressum {
@@ -110,7 +127,11 @@
   }
 
   .impressum {
-    padding-top: var(--navi-padding);
+    padding-top: var(--navi-height-mobile);
+
+    @media (min-width: var(--breakpoint-desktop)) {
+      padding-top: var(--navi-height-desktop);
+    }
   }
  
   ul {

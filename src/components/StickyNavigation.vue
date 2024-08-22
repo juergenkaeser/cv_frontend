@@ -8,7 +8,6 @@
  
 <style>
   .navigation {
-    height: var(--navi-padding);
     position: fixed;
     top: 0;
     left: 0;
@@ -17,7 +16,12 @@
     display: flex;
     width: 100%;
     padding-inline-start: 0;
-    list-style-type: none;  
+    list-style-type: none;
+    height: var(--navi-height-mobile);
+
+    @media (min-width: 768px) {
+      height: var(--navi-height-desktop);
+    }
   }
  
   .navigation-element {
@@ -26,11 +30,16 @@
     background-color: inherit;
     transition: background-color 200ms ease-in-out;
     margin-bottom: 0;
-    padding: var(--spacing-m);
     color: white;
-    font-size: var(--font-size-navi);
     font-weight: bold;
     user-select: none;
+    font-size: var(--font-size-navi-mobile);
+    padding: var(--spacing-s);
+
+    @media (min-width: 768px) {
+      font-size: var(--font-size-navi-desktop);
+      padding: var(--spacing-m);
+    }
   }
  
   .navigation-element:hover {
