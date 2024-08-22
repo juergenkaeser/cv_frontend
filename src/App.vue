@@ -66,6 +66,7 @@
 
 <style lang="scss">
   :root {
+    // TODO: Make breakpoint work in media-querys
     --breakpoint-desktop: 768px;
     --bg-color: #1a1a1a;
     --font-color-primary: #ffffff84;
@@ -101,7 +102,7 @@
   .projects {
     padding-top: var(--navi-height-mobile);
 
-    @media (min-width: var(--breakpoint-desktop)) {
+    @media (min-width: 768px) {
       padding-top: var(--navi-height-desktop);
     }
   }
@@ -112,7 +113,7 @@
 
   .cv,
   .projects {
-    @media (min-width: var(--breakpoint-desktop)) {
+    @media (min-width: 768px) {
       height: 100vh;
     }
   }

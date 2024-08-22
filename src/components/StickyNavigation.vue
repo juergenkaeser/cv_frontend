@@ -6,7 +6,7 @@
   </ul>
 </template>
  
-<style>
+<style lang="scss">
   .navigation {
     position: fixed;
     top: 0;
