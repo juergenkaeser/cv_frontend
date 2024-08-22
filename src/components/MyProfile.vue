@@ -9,7 +9,6 @@
   .background-container {
     background-image: url(https://placehold.co/1920x1080/31343C/EEE);
     background-position: center;
-    background-size: contain;
     height: 100%;
 
     .profile__name,
