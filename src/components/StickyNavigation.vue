@@ -40,6 +40,11 @@
       font-size: var(--font-size-navi-desktop);
       padding: var(--spacing-m);
     }
+
+    &:nth-child(2) {
+      border-left: 1px solid var(--font-color-primary);
+      border-right: 1px solid var(--font-color-primary);
+    }
   }
  
   .navigation-element:hover {
