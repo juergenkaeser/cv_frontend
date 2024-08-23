@@ -107,15 +107,10 @@
     }
   }
 
-  .profile {
-    height: 100vh;
-  }
-
+  .profile,
   .cv,
   .projects {
-    @media (min-width: 768px) {
-      height: 100vh;
-    }
+    height: 100vh;
   }
 
   .show-impressum {
@@ -138,6 +133,7 @@
   ul {
     padding: 0;
     margin: var(--spacing-large) 0 0 0;
+    font-size: 95%;
 
     &:before {
       content: attr(aria-label);
@@ -145,6 +141,14 @@
       font-weight: bold;
       font-style: italic;
       color: var(--font-color-secondary);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 120%;
+
+      &:before {
+        font-size: 140%;
+      }
     }
   }
  

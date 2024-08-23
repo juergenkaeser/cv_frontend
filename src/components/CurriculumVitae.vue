@@ -20,3 +20,15 @@
       </ul>
     </div>
 </template>
+
+<style lang="css">
+  .cv-lists {
+    max-height: 100%;
+    height: 100%;
+    padding: var(--spacing-s);
+
+    @media (min-width: 786px) {
+      padding: var(--spacing-l);
+    }
+  }
+</style>
