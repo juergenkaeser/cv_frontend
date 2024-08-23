@@ -13,7 +13,7 @@
     height: 100%;
     padding: var(--spacing-s);
 
-    @media (min-width: 786px) {
+    @media (min-width: 768px) {
       padding: var(--spacing-l);
     }
 
@@ -36,7 +36,7 @@
     }
 
     .profile__description {
-      @media (min-width: 786px) {
+      @media (min-width: 768px) {
         max-width:50%;
       }
     }

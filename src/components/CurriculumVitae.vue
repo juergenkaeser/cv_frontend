@@ -1,6 +1,7 @@
 <template>
     <div class="cv-lists">
-        <ul class="cv-list" aria-label="Professional experience">
+      <!-- TODO: better without before? -->
+      <ul class="cv-list" aria-label="Professional experience">
         <li class="cv-list-item">Software Engineer - arsmedium AG (2 years, 4 months)</li>
         <li class="cv-list-item">Softwaretester / -developer - ISO Travel Solutions GmbH (1 year, 3 months)</li>
         <li class="cv-list-item">Intern Software Engineering - mediendesign AG (6 months)</li>
@@ -21,13 +22,13 @@
     </div>
 </template>
 
-<style lang="css">
+<style lang="scss">
   .cv-lists {
     max-height: 100%;
     height: 100%;
     padding: var(--spacing-s);
 
-    @media (min-width: 786px) {
+    @media (min-width: 768px) {
       padding: var(--spacing-l);
     }
   }

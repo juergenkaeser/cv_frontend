@@ -31,7 +31,7 @@
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>This very page</template>
+            <template #headline>This very website</template>
             <template #subline>Subline</template>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </ProjectItem>
@@ -63,7 +63,11 @@
         height: 100%;
 
         .glide__slide {
-          padding: 0 var(--spacing-xxl);
+          padding: 0 var(--spacing-xl);
+
+          @media (min-width: 768px) {
+            padding: 0 var(--spacing-xxl);
+          }
         }
       }
     }
@@ -73,9 +77,13 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: var(--spacing-xxl);
-        height: var(--spacing-xxl);
-        color: white;
+        width: var(--spacing-xl);
+        height: var(--spacing-xl);
+
+        @media (min-width: 768px) {
+          width: var(--spacing-xxl);
+          height: var(--spacing-xxl);
+        }
 
         &.glide__arrow--left {
           left: 0;
