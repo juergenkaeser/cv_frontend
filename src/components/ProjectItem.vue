@@ -39,4 +39,8 @@
     margin-top: var(--spacing-s);
     font-style: italic;
   }
+
+  .project-item__content {
+    margin-top: var(--spacing-m);
+  }
 </style>

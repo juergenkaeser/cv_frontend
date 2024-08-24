@@ -47,7 +47,7 @@
     background-color: inherit;
     transition: background-color 200ms ease-in-out;
     margin-bottom: 0;
-    color: white;
+    color: var(--font-color-primary);
     font-weight: bold;
     user-select: none;
     font-size: var(--font-size-navi-mobile);

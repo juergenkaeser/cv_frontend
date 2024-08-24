@@ -68,10 +68,10 @@
   :root {
     // TODO: Make breakpoint work in media-querys
     --breakpoint-desktop: 768px;
-    --bg-color: #1a1a1a;
-    --font-color-primary: #ffffff84;
-    --font-color-secondary: #29cac2;
-    --font-color-secondary-dark: #156d68;
+    --bg-color: #1a1932;
+    --font-color-primary: #ffffff;
+    --font-color-secondary: #00d188;
+    --font-color-secondary-dark: #008062;
     --font-size-1: 16px;
     --font-size-2: 20px;
     --font-size-3: 24px;
