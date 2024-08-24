@@ -1,7 +1,7 @@
 <template>
   <div class="background-container">
     <h2 class="profile__name">Jürgen Käser</h2>
-    <p class="profile__profession">Software Engineer</p>
+    <p class="profile__profession">Softwaredeveloper</p>
     <p class="profile__description">Thank you for visiting my page. Here you will find an overview of some of my projects and my work experience.</p>
   </div>
 </template>
@@ -21,7 +21,12 @@
     .profile__profession {
       margin-block-start: 0;
       margin-block-end: 0;
+    }
+
+    .profile__profession {
       font-style: italic;
+      font-weight: bold;
+      font-size: 120%;
     }
 
     .profile__name {

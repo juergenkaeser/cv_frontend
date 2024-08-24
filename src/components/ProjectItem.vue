@@ -20,6 +20,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    a {
+      border-radius: var(--spacing-s);
+    }
   }
 
   .project-item__headline,

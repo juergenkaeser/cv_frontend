@@ -140,7 +140,6 @@
       content: attr(aria-label);
       font-size: 120%;
       font-weight: bold;
-      font-style: italic;
       color: var(--font-color-secondary);
     }
 
