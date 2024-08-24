@@ -56,9 +56,9 @@
       <div class="projects" ref="projects">
         <ProjectList />
       </div>
-      <div class="show-impressum" tabindex="0" ref="showImpressumBtn" role="button" @click="showImpressum()">Impressum</div>
+      <div class="impressum" tabindex="0" ref="showImpressumBtn" role="button" @click="showImpressum()">Impressum</div>
     </div>
-    <div class="impressum" ref="impressum" v-else>
+    <div class="impressum-page" ref="impressum" v-else>
       <Impressum @hide-impressum="hideImpressum()"/>
     </div>
   </main>
@@ -113,8 +113,9 @@
     height: 100vh;
   }
 
-  .show-impressum {
+  .impressum {
     margin: 0 auto;
+    margin-bottom: var(--spacing-s);
     width: fit-content;
 
     &:hover {
@@ -122,7 +123,7 @@
     }
   }
 
-  .impressum {
+  .impressum-page {
     padding-top: var(--navi-height-mobile);
 
     @media (min-width: var(--breakpoint-desktop)) {
