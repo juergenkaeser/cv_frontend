@@ -53,6 +53,13 @@
           </ProjectItem>
         </li>
       </ul>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+    </div>
     </div>
     <div class="glide__arrows" data-glide-el="controls">
       <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
@@ -83,6 +90,46 @@
 
           @media (min-width: 768px) {
             padding: 0 var(--spacing-xxl);
+          }
+        }
+      }
+
+      .glide__bullets {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+          bottom: 25%;
+          width: 25%;
+        }
+
+        .glide__bullet {
+          // TODO: add tokens for 20 and 24px spacing
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          padding: 0;
+          border: 0;
+          background-color: var(--font-color-primary);
+
+          @media (min-width: 768px) {
+            width: 24px;
+            height: 24px;
+          }
+
+          &.glide__bullet--active {
+            background-color: var(--font-color-secondary);
+          }
+
+          &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: var(--font-color-secondary);
+            cursor: pointer;
           }
         }
       }
