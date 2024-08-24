@@ -18,22 +18,38 @@
         <li class="glide__slide">
           <ProjectItem>
             <template #headline>Service Funnel Frontend</template>
-            <template #subline><a href="https://www.o2online.de/service/" target="_blank">Telefónica Germany GmbH & Co. OHG</a></template>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <template #subline>Industry: Telecommunications</template>
+            Development of a microapp with the frontend framework Vue.js for a large german telecommunications company. The application enables users to quickly find help on the company's website and thereby save service costs. The application is highly animated and was implemented down to the smallest detail and in close coordination with the customer.
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Building Frontend Components for a CMS</template>
-            <template #subline><a href="https://www.o2online.de/" target="_blank">Telefónica Germany GmbH & Co. OHG</a></template>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <template #headline>Building Frontend Components for a Content Management System</template>
+            <template #subline>Industry: Telecommunications</template>
+              Development of frontend components for a large german telecommunications company. As part of an agile team, I worked as a frontend developer. The components were built with the web component framework Lit, JavaScript/TypeScript, HTML and CSS/SCSS. I customized the components exactly to the customer's wishes and highly animated some of them with CSS.
+          </ProjectItem>
+        </li>
+        <li class="glide__slide">
+          <ProjectItem>
+            <template #headline>Automated user interface tests of a tourism software</template>
+            <template #subline>Industry: Travel / Softwaredevelopment</template>
+            For an in-house software of a software developer who specializes in solutions in the tourism environment, I created automated user interface tests using the test software QF-Test and also wrote scripts in Groovy.
+          </ProjectItem>
+        </li>
+        <li class="glide__slide">
+          <ProjectItem>
+            <template #headline>Maintainence and testing of inhouse-software</template>
+            <template #subline>Industry: Public Service / Softwaredevelopment</template>
+            Development of automated unit tests for an existing in-house software in C#. Additionally, I fixed bugs in the software reported by customers.
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
             <template #headline>This very website</template>
-            <template #subline>Subline</template>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <template #subline>Home project</template>
+              <p>This page was built with the frontend framework Vue.js using the new thirth version of the framework.</p>
+              <br />
+              <a href="https://github.com/juergenkaeser/cv_frontend" target="_blank">Project on GitHub</a>
           </ProjectItem>
         </li>
       </ul>

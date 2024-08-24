@@ -2,7 +2,7 @@
   <div class="background-container">
     <h2 class="profile__name">Jürgen Käser</h2>
     <p class="profile__profession">Software Engineer</p>
-    <p class="profile__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="profile__description">Thank you for visiting my page. Here you will find an overview of some of my projects and my work experience.</p>
   </div>
 </template>
 
