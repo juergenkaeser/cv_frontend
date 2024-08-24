@@ -8,6 +8,8 @@
       Here you will find an overview of my working experience and some of my projects.
     </p>
     <div class="github">
+      <p>Visit my GitHub account:</p>
+      <br />
       <a href="https://github.com/juergenkaeser" target="_blank">
         <svg width="98" height="96" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -24,8 +26,11 @@
 
 <style lang="scss">
 .background-container {
-  background-image: url(https://placehold.co/1920x1080/31343C/EEE);
+  position: relative;
+  background: rgba(0, 0, 0, .6) url("../assets/persons_shadow.JPG");
+  background-blend-mode: darken;
   background-position: center;
+  background-size:cover;
   height: 100%;
   padding: var(--spacing-s);
 
@@ -57,13 +62,22 @@
   }
 
   .profile__description {
+    max-width: 65%;
+
     @media (min-width: 768px) {
       max-width: 25%;
     }
   }
 
   .github {
+    position: absolute;
+    bottom: 0;
     margin-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-s);
+
+    @media (min-width: 768px) {
+      padding-bottom: var(--spacing-s);
+    }
 
     a:hover {
       background-color: transparent;

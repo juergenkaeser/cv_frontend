@@ -40,7 +40,7 @@ onMounted(() => {
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Automated user interface tests of a tourism software</template>
+            <template #headline>Automated user interface testing of a tourism software</template>
             <template #subline>Industry: Travel / Softwaredevelopment</template>
             For an in-house software of a software developer who specializes in solutions in the
             tourism environment, I created automated user interface tests using the test software
