@@ -19,7 +19,7 @@
           <ProjectItem>
             <template #headline>Service Funnel Frontend</template>
             <template #subline>Industry: Telecommunications</template>
-            Development of a microapp with the frontend framework Vue.js for a large german telecommunications company. The application enables users to quickly find help on the company's website and thereby save service costs. The application is highly animated and was implemented down to the smallest detail and in close coordination with the customer.
+            Development of a microapp with the frontend framework Vue.js, JavaScript/TypeScript, HTML and CSS/SCSS for a large german telecommunications company. The application enables users to quickly find help on the company's website and thereby save service costs. The application is highly animated and was implemented down to the smallest detail and in close coordination with the customer.
           </ProjectItem>
         </li>
         <li class="glide__slide">
