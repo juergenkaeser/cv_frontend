@@ -2,7 +2,7 @@
   <div class="background-container">
     <h2 class="profile__name">Jürgen Käser</h2>
     <p class="profile__profession">Softwaredeveloper</p>
-    <p class="profile__description">Thank you for visiting my page. Here you will find an overview of some of my projects and my work experience.</p>
+    <p class="profile__description">Thank you for visiting my website. Here you will find an overview of my working experience and some of my projects </p>
   </div>
 </template>
 
