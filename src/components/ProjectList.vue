@@ -38,7 +38,7 @@
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Maintainence and testing of inhouse-software</template>
+            <template #headline>Maintenance and testing of inhouse-software</template>
             <template #subline>Industry: Public Service / Softwaredevelopment</template>
             Development of automated unit tests for an existing in-house software in C#. Additionally, I fixed bugs in the software reported by customers.
           </ProjectItem>
