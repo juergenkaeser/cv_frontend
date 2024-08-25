@@ -14,7 +14,7 @@ onBeforeMount(() => {
 const me = ref()
 const cv = ref()
 const projects = ref()
-const impressumHidden = ref(true)
+const impressumHidden = ref(false)
 
 /* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
@@ -62,7 +62,7 @@ function hideImpressum() {
         <ProjectList :fontColorSecondary="fontColorSecondary" />
       </div>
       <div
-        class="impressum"
+        class="impressum-btn"
         tabindex="0"
         ref="showImpressumBtn"
         role="button"
@@ -71,7 +71,7 @@ function hideImpressum() {
         Impressum
       </div>
     </div>
-    <div class="impressum-page" ref="impressum" v-else>
+    <div class="impressum" ref="impressum" v-else>
       <Impressum @hide-impressum="hideImpressum()" />
     </div>
   </main>
@@ -82,7 +82,7 @@ function hideImpressum() {
   // TODO: Make breakpoint work in media-querys
   --breakpoint-desktop: 768px;
   --bg-color: #0c1618;
-  --font-color-primary: #faf4d3;
+  --font-color-primary: #fffcee;
   --font-color-secondary: #d1ac00;
   --font-color-secondary-dark: #453a49;
   --font-size-1: 16px;
@@ -127,22 +127,23 @@ body,
   height: 100vh;
 }
 
-.impressum {
+.impressum-btn {
   margin: 0 auto;
   margin-bottom: var(--spacing-s);
   width: fit-content;
+  font-size: 120%;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-.impressum-page {
-  padding-top: var(--navi-height-mobile);
+.impressum {
+    padding: var(--spacing-s);
 
-  @media (min-width: var(--breakpoint-desktop)) {
-    padding-top: var(--navi-height-desktop);
-  }
+    @media (min-width: 768px) {
+        padding: var(--spacing-l);
+    }
 }
 
 ul {
