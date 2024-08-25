@@ -1,5 +1,26 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
+  import { ref, defineProps, watch } from 'vue';
+
+  const props = defineProps({
+    activeComponent: {
+      type: String,
+      default: '',
+      required: true
+    }
+  });
+
+  watch(() => props.activeComponent, (newValue, oldValue) => {
+    removeActiveClass()
+    console.log(newValue + "- newValue")
+    console.log(oldValue + "- oldValue")
+    if (newValue == "profile") {
+      document.getElementsByClassName("navigation-element")[0].classList.add("active")
+    } else if (newValue == "cv") {
+      document.getElementsByClassName("navigation-element")[1].classList.add("active")
+    } else {
+      document.getElementsByClassName("navigation-element")[2].classList.add("active")
+    }
+  });
 
   // TODO: change other emits like that
   const emit = defineEmits(['navi-0-click', 'navi-1-click', 'navi-2-click'])
@@ -7,19 +28,27 @@
   const naviElement1 = ref()
   const naviElement2 = ref()
 
-  function setActive(e: Element, eventName: "navi-0-click" | "navi-1-click" | "navi-2-click") {
+  function setActiveClick(e: Element, eventName: "navi-0-click" | "navi-1-click" | "navi-2-click") {
+    removeActiveClass()
+    addActiveClass(e)
+    emit(eventName)
+  }
+
+  function addActiveClass(e: Element) {
+    e.classList.add('active')
+  }
+
+  function removeActiveClass() {
     const el = document.getElementsByClassName('active')[0]
     el.classList.remove('active')
-    e.classList.add('active')
-    emit(eventName)
   }
 </script>
 
 <template>
   <ul class="navigation" ref="navigation" role="navigation">
-    <li class="navigation-element active" ref="naviElement0" @click="setActive(naviElement0, 'navi-0-click')"><p>About me</p></li>
-    <li class="navigation-element" ref="naviElement1" @click="setActive(naviElement1, 'navi-1-click')"><p>Curriculum Vitae</p></li>
-    <li class="navigation-element" ref="naviElement2" @click="setActive(naviElement2, 'navi-2-click')"><p>Projects</p></li>
+    <li class="navigation-element active" ref="naviElement0" @click="setActiveClick(naviElement0, 'navi-0-click')"><p>About me</p></li>
+    <li class="navigation-element" ref="naviElement1" @click="setActiveClick(naviElement1, 'navi-1-click')"><p>Curriculum Vitae</p></li>
+    <li class="navigation-element" ref="naviElement2" @click="setActiveClick(naviElement2, 'navi-2-click')"><p>Projects</p></li>
   </ul>
 </template>
  

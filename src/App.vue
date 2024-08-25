@@ -4,9 +4,9 @@ import Profile from './components/MyProfile.vue'
 import CurriculumVitae from './components/CurriculumVitae.vue'
 import ProjectList from './components/ProjectList.vue'
 import Impressum from './components/MyImpressum.vue'
-import { ref, onBeforeMount } from 'vue'
+import { ref, onBeforeMount, onMounted } from 'vue'
 
-let fontColorSecondary = "";
+let fontColorSecondary = ''
 onBeforeMount(() => {
   fontColorSecondary = getComputedStyle(document.body).getPropertyValue('--font-color-secondary')
 })
@@ -15,6 +15,8 @@ const me = ref()
 const cv = ref()
 const projects = ref()
 const impressumHidden = ref(true)
+
+let activeComponent = "";
 
 /* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
@@ -26,6 +28,12 @@ const impressumHidden = ref(true)
       }
     });
   }) */
+
+onMounted(() => {
+  observer.observe(me.value)
+  observer.observe(cv.value)
+  observer.observe(projects.value)
+})
 
 function naviClick(e: Element) {
   e.scrollIntoView({ behavior: 'smooth' })
@@ -42,6 +50,20 @@ function showImpressum() {
 function hideImpressum() {
   impressumHidden.value = true
 }
+
+// Callback function triggered when visibility changes for each element
+const callback = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio >= 0.6) {
+      console.log(entry)
+      activeComponent = entry.target.classList[0]
+    }
+  })
+}
+
+const observer = new IntersectionObserver(callback, {
+  threshold: 0.6
+})
 </script>
 
 <template>
@@ -51,6 +73,7 @@ function hideImpressum() {
         @navi-0-click="naviClick(me)"
         @navi-1-click="naviClick(cv)"
         @navi-2-click="naviClick(projects)"
+        :activeComponent=activeComponent
       />
       <div class="profile" ref="me">
         <Profile :fontColorSecondary="fontColorSecondary" />
@@ -139,11 +162,11 @@ body,
 }
 
 .impressum {
-    padding: var(--spacing-s);
+  padding: var(--spacing-s);
 
-    @media (min-width: 768px) {
-        padding: var(--spacing-l);
-    }
+  @media (min-width: 768px) {
+    padding: var(--spacing-l);
+  }
 }
 
 li {
@@ -156,7 +179,7 @@ li,
 p {
   font-size: 90%;
 
-  @media (min-width: 360px) {
+  @media (min-width: 420px) {
     font-size: 100%;
   }
 
@@ -170,11 +193,13 @@ a {
   border-radius: var(--spacing-s);
 
   &:hover {
-      background-color: var(--font-color-secondary-dark);
+    background-color: var(--font-color-secondary-dark);
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--font-color-secondary);
   font-weight: bold;
 }

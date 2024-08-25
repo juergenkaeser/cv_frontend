@@ -37,11 +37,6 @@
       padding: var(--spacing-l);
     }
 
-    .cv-list-headline {
-      color: var(--font-color-secondary);
-      font-weight: bold;
-    }
-
     .cv-list {
       padding: 0; 
       margin: var(--spacing-large) 0 0 0;
