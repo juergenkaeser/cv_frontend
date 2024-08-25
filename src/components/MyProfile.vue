@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div class="background-container">
-    <h2 class="profile__name">Jürgen Käser</h2>
+    <h1 class="profile__name">Jürgen Käser</h1>
     <p class="profile__profession">Softwaredeveloper</p>
     <div class="profile__description-wrapper">
       <p class="profile__description-item">
@@ -49,7 +49,7 @@ defineProps({
 <style lang="scss">
 .background-container {
   position: relative;
-  background: rgba(0, 0, 0, 0.6) url('../assets/persons_shadow.JPG');
+  background: rgba(0, 0, 0, 0.7) url('../assets/persons_shadow.JPG');
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;

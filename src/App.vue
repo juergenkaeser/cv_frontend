@@ -165,7 +165,6 @@ li {
   padding-left: var(--spacing-m);
 }
 
-h1,
 li,
 p {
   font-size: 90%;

@@ -42,7 +42,6 @@
 
   .project-item__content {
     margin-top: var(--spacing-m);
-
     font-size: 100%;
   }
 </style>
