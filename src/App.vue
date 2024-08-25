@@ -1,17 +1,22 @@
 <script setup lang="ts">
-  import Navigation from './components/StickyNavigation.vue'
-  import Profile from './components/MyProfile.vue'
-  import CurriculumVitae from './components/CurriculumVitae.vue';
-  import ProjectList from './components/ProjectList.vue'
-  import Impressum from './components/MyImpressum.vue'
-  import { ref } from 'vue'
+import Navigation from './components/StickyNavigation.vue'
+import Profile from './components/MyProfile.vue'
+import CurriculumVitae from './components/CurriculumVitae.vue'
+import ProjectList from './components/ProjectList.vue'
+import Impressum from './components/MyImpressum.vue'
+import { ref, onBeforeMount } from 'vue'
 
-  const me = ref()
-  const cv = ref()
-  const projects = ref()
-  const impressumHidden = ref(true)
+let fontColorSecondary = "";
+onBeforeMount(() => {
+  fontColorSecondary = getComputedStyle(document.body).getPropertyValue('--font-color-secondary')
+})
 
-  /* TODO: Make me work for A11Y
+const me = ref()
+const cv = ref()
+const projects = ref()
+const impressumHidden = ref(true)
+
+/* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
   onMounted(() => {
     showImpressumBtn.value.addEventListener('keydown', function(event) {
@@ -22,21 +27,21 @@
     });
   }) */
 
-  function naviClick(e: Element) {
-    e.scrollIntoView({ behavior: "smooth" });
-  };
+function naviClick(e: Element) {
+  e.scrollIntoView({ behavior: 'smooth' })
+}
 
-  function showImpressum() {
-    impressumHidden.value = false
-    let element = document.getElementById("app");
-    if (element) {
-      element.scrollIntoView();
-    }
+function showImpressum() {
+  impressumHidden.value = false
+  let element = document.getElementById('app')
+  if (element) {
+    element.scrollIntoView()
   }
+}
 
-  function hideImpressum() {
-    impressumHidden.value = true
-  }
+function hideImpressum() {
+  impressumHidden.value = true
+}
 </script>
 
 <template>
@@ -48,114 +53,122 @@
         @navi-2-click="naviClick(projects)"
       />
       <div class="profile" ref="me">
-        <Profile />
+        <Profile :fontColorSecondary="fontColorSecondary" />
       </div>
       <div class="cv" ref="cv">
         <CurriculumVitae />
       </div>
       <div class="projects" ref="projects">
-        <ProjectList />
+        <ProjectList :fontColorSecondary="fontColorSecondary" />
       </div>
-      <div class="impressum" tabindex="0" ref="showImpressumBtn" role="button" @click="showImpressum()">Impressum</div>
+      <div
+        class="impressum"
+        tabindex="0"
+        ref="showImpressumBtn"
+        role="button"
+        @click="showImpressum()"
+      >
+        Impressum
+      </div>
     </div>
     <div class="impressum-page" ref="impressum" v-else>
-      <Impressum @hide-impressum="hideImpressum()"/>
+      <Impressum @hide-impressum="hideImpressum()" />
     </div>
   </main>
 </template>
 
 <style lang="scss">
-  :root {
-    // TODO: Make breakpoint work in media-querys
-    --breakpoint-desktop: 768px;
-    --bg-color: #1a1932;
-    --font-color-primary: #ffffff;
-    --font-color-secondary: #00d188;
-    --font-color-secondary-dark: #008062;
-    --font-size-1: 16px;
-    --font-size-2: 20px;
-    --font-size-3: 24px;
-    --spacing-s: 4px;
-    --spacing-m: 8px;
-    --spacing-l: 16px;
-    --spacing-xl: 40px;
-    --spacing-xxl: 80px;
-    --navi-height-mobile: 28px;
-    --navi-height-desktop: 40px;
-    --font-size-navi-mobile: 12px;
-    --font-size-navi-desktop: 16px;
+:root {
+  // TODO: Make breakpoint work in media-querys
+  --breakpoint-desktop: 768px;
+  --bg-color: #0c1618;
+  --font-color-primary: #faf4d3;
+  --font-color-secondary: #d1ac00;
+  --font-color-secondary-dark: #453a49;
+  --font-size-1: 16px;
+  --font-size-2: 20px;
+  --font-size-3: 24px;
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 16px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 80px;
+  --navi-height-mobile: 28px;
+  --navi-height-desktop: 40px;
+  --font-size-navi-mobile: 12px;
+  --font-size-navi-desktop: 16px;
+}
+
+#app {
+  display: block;
+  width: 100%;
+}
+
+body,
+#app {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color-primary);
+}
+
+.profile,
+.cv,
+.projects {
+  padding-top: var(--navi-height-mobile);
+
+  @media (min-width: 768px) {
+    padding-top: var(--navi-height-desktop);
+  }
+}
+
+.profile,
+.cv,
+.projects {
+  height: 100vh;
+}
+
+.impressum {
+  margin: 0 auto;
+  margin-bottom: var(--spacing-s);
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.impressum-page {
+  padding-top: var(--navi-height-mobile);
+
+  @media (min-width: var(--breakpoint-desktop)) {
+    padding-top: var(--navi-height-desktop);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: var(--spacing-large) 0 0 0;
+  font-size: 95%;
+
+  &:before {
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--font-color-secondary);
   }
 
-  #app {
-    display: block;
-    width: 100%;
-  }
- 
-  body,
-  #app {
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--font-color-primary);
-  }
-
-  .profile,
-  .cv,
-  .projects {
-    padding-top: var(--navi-height-mobile);
-
-    @media (min-width: 768px) {
-      padding-top: var(--navi-height-desktop);
-    }
-  }
-
-  .profile,
-  .cv,
-  .projects {
-    height: 100vh;
-  }
-
-  .impressum {
-    margin: 0 auto;
-    margin-bottom: var(--spacing-s);
-    width: fit-content;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .impressum-page {
-    padding-top: var(--navi-height-mobile);
-
-    @media (min-width: var(--breakpoint-desktop)) {
-      padding-top: var(--navi-height-desktop);
-    }
-  }
- 
-  ul {
-    padding: 0;
-    margin: var(--spacing-large) 0 0 0;
-    font-size: 95%;
+  @media (min-width: 768px) {
+    font-size: 120%;
 
     &:before {
-      content: attr(aria-label);
-      font-size: 120%;
-      font-weight: bold;
-      color: var(--font-color-secondary);
-    }
-
-    @media (min-width: 768px) {
-      font-size: 120%;
-
-      &:before {
-        font-size: 140%;
-      }
+      font-size: 140%;
     }
   }
- 
-  li {
-    list-style-type: none;
-    margin-bottom: var(--spacing-s);
-    padding-left: var(--spacing-m);
-  }
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: var(--spacing-s);
+  padding-left: var(--spacing-m);
+}
 </style>

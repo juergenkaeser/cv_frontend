@@ -42,5 +42,13 @@
 
   .project-item__content {
     margin-top: var(--spacing-m);
+
+    a {
+      color: var(--font-color-secondary);
+
+      &:hover {
+        background-color: var(--font-color-secondary-dark);
+      }
+    }
   }
 </style>

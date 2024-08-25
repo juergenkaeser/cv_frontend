@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import ProjectItem from './ProjectItem.vue'
-import { onMounted } from 'vue'
+import { onMounted, defineProps } from 'vue'
 import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm'
+
+defineProps({
+  fontColorSecondary: {
+    type: String,
+    default: '',
+    required: true
+  }
+});
 
 onMounted(() => {
   new Glide('.glide', {
@@ -86,7 +94,7 @@ onMounted(() => {
           <g id="SVGRepo_iconCarrier">
             <path
               d="M15 6L9 12L15 18M15 12H15.01"
-              stroke="#00d188"
+              :stroke=fontColorSecondary
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -101,7 +109,7 @@ onMounted(() => {
           <g id="SVGRepo_iconCarrier">
             <path
               d="M9 6L15 12L9 18M9 12H9.01"
-              stroke="#00d188"
+              :stroke=fontColorSecondary
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
