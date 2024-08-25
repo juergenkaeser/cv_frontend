@@ -36,7 +36,7 @@ onMounted(() => {
         <li class="glide__slide">
           <ProjectItem>
             <template #headline
-              >Building Frontend Components for a Content Management System</template
+              >Building Frontend Components for a CMS</template
             >
             <template #subline>Industry: Telecommunications</template>
             Development of frontend components for a large german telecommunications company. As
@@ -48,7 +48,7 @@ onMounted(() => {
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Automated user interface testing of a tourism software</template>
+            <template #headline>Automated user interface testing</template>
             <template #subline>Industry: Travel / Softwaredevelopment</template>
             For an in-house software of a software developer who specializes in solutions in the
             tourism environment, I created automated user interface tests using the test software

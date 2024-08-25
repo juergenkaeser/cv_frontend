@@ -1,17 +1,22 @@
 <template>
     <div class="cv-lists">
       <!-- TODO: better without before? -->
-      <ul class="cv-list" aria-label="Professional experience">
+      <h2 class="cv-list-headline" role="label">Professional experience</h2>
+      <ul class="cv-list">
         <li class="cv-list-item"><span class="profession">Software Engineer</span> - arsmedium AG (2 years, 4 months)</li>
         <li class="cv-list-item"><span class="profession">Softwaretester / -developer</span> - ISO Travel Solutions GmbH (1 year, 3 months)</li>
         <li class="cv-list-item"><span class="profession">Intern Software Engineering</span> - mediendesign AG (6 months)</li>
         <li class="cv-list-item"><span class="profession">Working Student IT</span> - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
       </ul>
+      <h2 class="cv-list-headline" role="label">Education</h2>
       <ul class="cv-list" aria-label="Education">
+        <li class="cv-list-item-headline"></li>
         <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
         <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
       </ul>
-      <ul class="cv-list" aria-label="Technologies">
+      <h2 class="cv-list-headline" role="label">Technologies</h2>
+      <ul class="cv-list">
+        <li class="cv-list-item-headline"></li>
         <li class="cv-list-item">Java</li>
         <li class="cv-list-item">SQL</li>
         <li class="cv-list-item">JavaScript / TypeScript</li>
@@ -30,6 +35,16 @@
 
     @media (min-width: 768px) {
       padding: var(--spacing-l);
+    }
+
+    .cv-list-headline {
+      color: var(--font-color-secondary);
+      font-weight: bold;
+    }
+
+    .cv-list {
+      padding: 0; 
+      margin: var(--spacing-large) 0 0 0;
     }
 
     .cv-list-item {

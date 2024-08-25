@@ -83,7 +83,7 @@ function hideImpressum() {
   --breakpoint-desktop: 768px;
   --bg-color: #0c1618;
   --font-color-primary: #fffcee;
-  --font-color-secondary: #d1ac00;
+  --font-color-secondary: #00d1b9;
   --font-color-secondary-dark: #453a49;
   --font-size-1: 16px;
   --font-size-2: 20px;
@@ -146,19 +146,6 @@ body,
     }
 }
 
-ul {
-  padding: 0;
-  margin: var(--spacing-large) 0 0 0;
-  font-size: 95%;
-
-  &:before {
-    content: attr(aria-label);
-    font-size: 120%;
-    font-weight: bold;
-    color: var(--font-color-secondary);
-  }
-}
-
 li {
   list-style-type: none;
   margin-bottom: var(--spacing-s);
@@ -185,5 +172,10 @@ a {
   &:hover {
       background-color: var(--font-color-secondary-dark);
   }
+}
+
+h1, h2, h3 {
+  color: var(--font-color-secondary);
+  font-weight: bold;
 }
 </style>
