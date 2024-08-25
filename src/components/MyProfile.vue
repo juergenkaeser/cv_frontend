@@ -2,11 +2,20 @@
   <div class="background-container">
     <h2 class="profile__name">Jürgen Käser</h2>
     <p class="profile__profession">Softwaredeveloper</p>
-    <p class="profile__description">
-      Thank you for visiting my website!
-      <br />
-      Here you will find an overview of my working experience and some of my projects.
-    </p>
+    <div class="profile__description-wrapper">
+      <div class="profile__description-item">
+        Thank you for visiting my website!
+      </div>
+      <div class="profile__description-item">
+        Here you will find an overview of my working experience and some of my projects.
+      </div>
+      <div class="profile__description-item">
+        I have already gained several years of professional experience and am currently in the process
+      of retraining as an Computer Science Expert - Subject Area: Software Development (IHK) at Control Data Training GmbH in Nuremberg. For the end of February next
+      year, I am looking for an internship in software development and am also interested in a
+      permanent position beyond that.
+      </div>
+    </div>
     <div class="github">
       <p>Visit my GitHub account:</p>
       <br />
@@ -27,10 +36,10 @@
 <style lang="scss">
 .background-container {
   position: relative;
-  background: rgba(0, 0, 0, .6) url("../assets/persons_shadow.JPG");
+  background: rgba(0, 0, 0, 0.6) url('../assets/persons_shadow.JPG');
   background-blend-mode: darken;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   height: 100%;
   padding: var(--spacing-s);
 
@@ -57,16 +66,20 @@
   }
 
   .profile__profession,
-  .profile__description {
+  .profile__description-wrapper {
     margin-top: var(--spacing-m);
   }
 
-  .profile__description {
-    max-width: 65%;
+  .profile__description-wrapper {
+    max-width: 100%;
 
     @media (min-width: 768px) {
       max-width: 25%;
     }
+  }
+
+  .profile__description-item {
+    margin-bottom: var(--spacing-l);
   }
 
   .github {
@@ -81,6 +94,14 @@
 
     a:hover {
       background-color: transparent;
+    }
+
+    p {
+      opacity: 0;
+
+      @media (min-width: 768px) {
+        opacity: 1;
+      }
     }
   }
 }
