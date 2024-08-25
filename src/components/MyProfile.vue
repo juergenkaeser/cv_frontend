@@ -10,7 +10,8 @@
         Here you will find an overview of my working experience and some of my projects.
       </div>
       <div class="profile__description-item">
-        I have already gained several years of professional experience and am currently in the process
+        After completing my degree in business administration I found my love for programming.
+      Since then I have already gained several years of professional experience and am currently in the process
       of retraining as an Computer Science Expert - Subject Area: Software Development (IHK) at Control Data Training GmbH in Nuremberg. For the end of February next
       year, I am looking for an internship in software development and am also interested in a
       permanent position beyond that.
