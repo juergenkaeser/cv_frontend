@@ -100,7 +100,7 @@ defineProps({
     padding-bottom: var(--spacing-s);
 
     @media (min-width: 768px) {
-      padding-bottom: var(--spacing-s);
+      padding-bottom: var(--spacing-m);
     }
 
     a:hover {
