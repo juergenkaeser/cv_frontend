@@ -14,7 +14,7 @@ onBeforeMount(() => {
 const me = ref()
 const cv = ref()
 const projects = ref()
-const impressumHidden = ref(false)
+const impressumHidden = ref(true)
 
 /* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
@@ -157,19 +157,34 @@ ul {
     font-weight: bold;
     color: var(--font-color-secondary);
   }
-
-  @media (min-width: 768px) {
-    font-size: 120%;
-
-    &:before {
-      font-size: 140%;
-    }
-  }
 }
 
 li {
   list-style-type: none;
   margin-bottom: var(--spacing-s);
   padding-left: var(--spacing-m);
+}
+
+h1,
+li,
+p {
+  font-size: 90%;
+
+  @media (min-width: 360px) {
+    font-size: 100%;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 120%;
+  }
+}
+
+a {
+  color: var(--font-color-secondary);
+  border-radius: var(--spacing-s);
+
+  &:hover {
+      background-color: var(--font-color-secondary-dark);
+  }
 }
 </style>

@@ -40,27 +40,4 @@
         background-color: var(--font-color-secondary);
     }
 }
-
-h1,
-h2,
-h3 {
-    color: var(--font-color-secondary);
-    font-weight: bold;
-}
-
-h1,
-h2,
-h3,
-p {
-    font-size: 120%;
-}
-
-a {
-    color: var(--font-color-secondary);
-    border-radius: var(--spacing-s);
-
-    &:hover {
-        background-color: var(--font-color-secondary-dark);
-    }
-}
 </style>

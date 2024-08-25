@@ -19,14 +19,14 @@ defineProps({
         Thank you for visiting my website, which I created using the JavaScript framework Vue.js.
       </p>
       <p class="profile__description-item">
-        Here you will find an overview of my working experience and some of my projects.
-      </p>
-      <p class="profile__description-item">
         After completing my degree in business administration I found my love for programming.
       Since then I have already gained several years of professional experience and am currently in the process
       of retraining as an Computer Science Expert - Subject Area: Software Development (IHK) at Control Data Training GmbH in Nuremberg. For the end of February next
       year, I am looking for an internship in software development and am also interested in a
       permanent position beyond that.
+      </p>
+      <p class="profile__description-item">
+        Here you will find an overview of my working experience and some of my projects. Enjoy!
       </p>
     </div>
     <div class="github">
@@ -71,15 +71,9 @@ defineProps({
     font-weight: bold;
   }
 
-  .profile__profession,
-  .profile__description-item {
-    font-size: 120%;
-  }
-
   .profile__name {
     color: var(--font-color-secondary);
     font-weight: bold;
-    font-size: 32px;
   }
 
   .profile__profession,
@@ -115,7 +109,6 @@ defineProps({
 
     p {
       opacity: 0;
-      font-size: 120%;
 
       @media (min-width: 768px) {
         opacity: 1;

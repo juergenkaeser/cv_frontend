@@ -17,9 +17,9 @@
 
 <template>
   <ul class="navigation" ref="navigation" role="navigation">
-    <li class="navigation-element active" ref="naviElement0" @click="setActive(naviElement0, 'navi-0-click')">About me</li>
-    <li class="navigation-element" ref="naviElement1" @click="setActive(naviElement1, 'navi-1-click')">Curriculum Vitae</li>
-    <li class="navigation-element" ref="naviElement2" @click="setActive(naviElement2, 'navi-2-click')">Projects</li>
+    <li class="navigation-element active" ref="naviElement0" @click="setActive(naviElement0, 'navi-0-click')"><p>About me</p></li>
+    <li class="navigation-element" ref="naviElement1" @click="setActive(naviElement1, 'navi-1-click')"><p>Curriculum Vitae</p></li>
+    <li class="navigation-element" ref="naviElement2" @click="setActive(naviElement2, 'navi-2-click')"><p>Projects</p></li>
   </ul>
 </template>
  
@@ -48,14 +48,13 @@
     transition: background-color 200ms ease-in-out;
     margin-bottom: 0;
     color: var(--font-color-primary);
+    font-size: 100%;
     font-weight: bold;
     user-select: none;
-    font-size: var(--font-size-navi-mobile);
-    padding: var(--spacing-s);
+    padding: 2px;
 
     @media (min-width: 768px) {
-      font-size: var(--font-size-navi-desktop);
-      padding: var(--spacing-m);
+      padding: 6px;
     }
 
     &:nth-child(2) {
@@ -70,6 +69,10 @@
     &:hover {
       cursor: pointer;
       background-color: var(--font-color-secondary);
+    }
+
+    p {
+      font-weight: inherit;
     }
   }
 </style>
