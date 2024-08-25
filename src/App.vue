@@ -73,7 +73,7 @@ const observer = new IntersectionObserver(callback, {
         @navi-0-click="naviClick(me)"
         @navi-1-click="naviClick(cv)"
         @navi-2-click="naviClick(projects)"
-        :activeComponent=activeComponent
+        :activeComponent="activeComponent"
       />
       <div class="profile" ref="me">
         <Profile :fontColorSecondary="fontColorSecondary" />
@@ -106,7 +106,7 @@ const observer = new IntersectionObserver(callback, {
   --breakpoint-desktop: 768px;
   --bg-color: #0c1618;
   --font-color-primary: #fffcee;
-  --font-color-secondary: #00d1b9;
+  --font-color-secondary: #5bb7a6;
   --font-color-secondary-dark: #453a49;
   --font-size-1: 16px;
   --font-size-2: 20px;

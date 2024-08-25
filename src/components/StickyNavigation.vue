@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, defineProps, watch } from 'vue';
+  import { ref, defineProps, watch, onMounted } from 'vue';
 
   const props = defineProps({
     activeComponent: {
@@ -9,24 +9,26 @@
     }
   });
 
-  watch(() => props.activeComponent, (newValue, oldValue) => {
-    removeActiveClass()
-    console.log(newValue + "- newValue")
-    console.log(oldValue + "- oldValue")
-    if (newValue == "profile") {
-      document.getElementsByClassName("navigation-element")[0].classList.add("active")
-    } else if (newValue == "cv") {
-      document.getElementsByClassName("navigation-element")[1].classList.add("active")
-    } else {
-      document.getElementsByClassName("navigation-element")[2].classList.add("active")
-    }
-  });
-
   // TODO: change other emits like that
   const emit = defineEmits(['navi-0-click', 'navi-1-click', 'navi-2-click'])
   const naviElement0 = ref()
   const naviElement1 = ref()
   const naviElement2 = ref()
+
+  onMounted(() => {
+    watch(() => props.activeComponent, (newValue, oldValue) => {
+      //removeActiveClass()
+      console.log(newValue + "- newValue")
+      console.log(oldValue + "- oldValue")
+      /*if (newValue == "profile") {
+        document.getElementsByClassName("navigation-element")[0].classList.add("active")
+      } else if (newValue == "cv") {
+        document.getElementsByClassName("navigation-element")[1].classList.add("active")
+      } else {
+        document.getElementsByClassName("navigation-element")[2].classList.add("active")
+      }*/
+   });
+  })
 
   function setActiveClick(e: Element, eventName: "navi-0-click" | "navi-1-click" | "navi-2-click") {
     removeActiveClass()
