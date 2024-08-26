@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import ProjectItem from './ProjectItem.vue'
 import { onMounted, defineProps } from 'vue'
 import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm'

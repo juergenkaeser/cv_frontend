@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Navigation from './components/StickyNavigation.vue'
 import Profile from './components/MyProfile.vue'
 import CurriculumVitae from './components/CurriculumVitae.vue'
@@ -35,7 +35,7 @@ onMounted(() => {
   observer.observe(projects.value)
 })
 
-function naviClick(e: Element) {
+function naviClick(e) {
   e.scrollIntoView({ behavior: 'smooth' })
 }
 
@@ -52,11 +52,12 @@ function hideImpressum() {
 }
 
 // Callback function triggered when visibility changes for each element
-const callback = (entries: IntersectionObserverEntry[]) => {
+const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio >= 0.6) {
-      console.log(entry)
-      activeComponent = entry.target.classList[0]
+      //console.log(entry)
+      activeComponent = entry.target.classList[0].toString()
+      console.log(activeComponent)
     }
   })
 }
