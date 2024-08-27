@@ -46,7 +46,7 @@ defineProps({
 <style lang="scss">
 .background-container {
   position: relative;
-  background: rgba(0, 0, 0, 0.7) url('../assets/persons_shadow.JPG');
+  background: rgba(0, 0, 0, 0.8) url('../assets/persons_shadow.JPG');
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;

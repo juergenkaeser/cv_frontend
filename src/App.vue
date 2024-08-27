@@ -104,7 +104,7 @@ const observer = new IntersectionObserver(callback, {
   --breakpoint-desktop: 768px;
   --bg-color: #110c17;
   --font-color-primary: #eefff7;
-  --font-color-secondary: #e3a335;
+  --font-color-secondary: #38c2bb;
   --font-color-secondary-dark: #413a49;
   --font-size-1: 16px;
   --font-size-2: 20px;
