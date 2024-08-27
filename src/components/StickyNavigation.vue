@@ -14,8 +14,7 @@ const naviElement1 = ref()
 const naviElement2 = ref()
 
 onMounted(() => {
-  console.log(props.activeComponent)
-  watch(() => props.activeComponent, (newValue, oldValue) => {
+  watch(() => props.activeComponent, (newValue) => {
     removeActiveClass()
     if (newValue === 'profile') {
       document.getElementsByClassName("navigation-element")[0].classList.add("active")
