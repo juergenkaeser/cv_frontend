@@ -6,17 +6,16 @@ import ProjectList from './components/ProjectList.vue'
 import Impressum from './components/MyImpressum.vue'
 import { ref, onBeforeMount, onMounted } from 'vue'
 
-let fontColorSecondary = ''
 onBeforeMount(() => {
-  fontColorSecondary = getComputedStyle(document.body).getPropertyValue('--font-color-secondary')
+  fontColorSecondary.value = getComputedStyle(document.body).getPropertyValue('--font-color-secondary')
 })
 
 const me = ref()
 const cv = ref()
 const projects = ref()
 const impressumHidden = ref(true)
-
-let activeComponent = "";
+const activeComponent = ref('profile')
+const fontColorSecondary = ref('')
 
 /* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
@@ -55,9 +54,7 @@ function hideImpressum() {
 const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio >= 0.6) {
-      //console.log(entry)
-      activeComponent = entry.target.classList[0].toString()
-      console.log(activeComponent)
+      activeComponent.value = entry.target.classList[0].toString()
     }
   })
 }

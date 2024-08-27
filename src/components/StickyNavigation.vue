@@ -1,9 +1,8 @@
 <script setup>
-import { ref, watch, onMounted } from 'vue';
-defineProps({
+import { ref, onMounted, watch } from 'vue';
+const props = defineProps({
   activeComponent: {
     type: String,
-    default: 'profile',
     required: true
   }
 });
@@ -14,21 +13,19 @@ const naviElement0 = ref()
 const naviElement1 = ref()
 const naviElement2 = ref()
 
-/*onMounted(() => {
+onMounted(() => {
   console.log(props.activeComponent)
-  watch(() => activeComponent, (newValue, oldValue) => {
+  watch(() => props.activeComponent, (newValue, oldValue) => {
     removeActiveClass()
-    console.log(newValue + "- newValue")
-    console.log(oldValue + "- oldValue")
-    if (newValue == "profile") {
+    if (newValue === 'profile') {
       document.getElementsByClassName("navigation-element")[0].classList.add("active")
-    } else if (newValue == "cv") {
+    } else if (newValue === 'cv') {
       document.getElementsByClassName("navigation-element")[1].classList.add("active")
-    } else if (newValue == "projects") {
+    } else if (newValue === 'projects') {
       document.getElementsByClassName("navigation-element")[2].classList.add("active")
     }
  });
-})*/
+})
 
 function setActiveClick(e, eventName) {
   removeActiveClass()
@@ -47,7 +44,7 @@ function removeActiveClass() {
 </script>
 
 <template>
-  <ul class="navigation" ref="navigation" role="navigation" :active-component=activeComponent>
+  <ul class="navigation" ref="navigation" role="navigation">
     <li
       class="navigation-element active"
       ref="naviElement0"
