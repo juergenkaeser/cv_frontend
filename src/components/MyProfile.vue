@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
+import data from '../assets/data.json';
 
 defineProps({
   fontColorSecondary: {
@@ -12,21 +13,17 @@ defineProps({
 
 <template>
   <div class="background-container">
-    <h1 class="profile__name">Jürgen Käser</h1>
-    <p class="profile__profession">Softwaredeveloper</p>
+    <h1 class="profile__name">{{ data.firstName }} {{ data.lastName }}</h1>
+    <p class="profile__profession">{{ data.jobDescription }}</p>
     <div class="profile__description-wrapper">
       <p class="profile__description-item">
-        Thank you for visiting my website, which I created using the JavaScript framework Vue.js.
+        {{ data.descriptionText.text1 }}
       </p>
       <p class="profile__description-item">
-        After completing my degree in business administration I found my love for programming.
-      Since then I have already gained several years of professional experience and am currently in the process
-      of retraining as an Computer Science Expert - Subject Area: Software Development (IHK) at Control Data Training GmbH in Nuremberg. For the end of February next
-      year, I am looking for an internship in software development and am also interested in a
-      permanent position beyond that.
+        {{ data.descriptionText.text2 }}
       </p>
       <p class="profile__description-item">
-        Here you will find an overview of my working experience and some of my projects. Enjoy!
+        {{ data.descriptionText.text3 }}
       </p>
     </div>
     <div class="github">

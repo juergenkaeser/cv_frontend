@@ -1,28 +1,30 @@
+
+<script setup>
+import data from '../assets/data.json';
+</script>
+
 <template>
     <div class="cv-lists">
-      <!-- TODO: better without before? -->
-      <h2 class="cv-list-headline" role="label">Professional experience</h2>
+      <h2 class="cv-list-headline" role="label">{{ data.experiencesHeadline }}</h2>
       <ul class="cv-list">
-        <li class="cv-list-item"><span class="profession">Software Engineer</span> - arsmedium AG (2 years, 4 months)</li>
-        <li class="cv-list-item"><span class="profession">Softwaretester / -developer</span> - ISO Travel Solutions GmbH (1 year, 3 months)</li>
-        <li class="cv-list-item"><span class="profession">Intern Software Engineering</span> - mediendesign AG (6 months)</li>
-        <li class="cv-list-item"><span class="profession">Working Student IT</span> - Siemens AG - Digital Factory Division (1 year, 3 months)</li>
+        <li class="cv-list-item"><span class="profession">{{ data.experiences[0].job }}</span> - {{ data.experiences[0].entry }}</li>
+        <li class="cv-list-item"><span class="profession">{{ data.experiences[1].job }}</span> - {{ data.experiences[1].entry }}</li>
+        <li class="cv-list-item"><span class="profession">{{ data.experiences[2].job }}</span> - {{ data.experiences[2].entry }}</li>
+        <li class="cv-list-item"><span class="profession">{{ data.experiences[3].job }}</span> - {{ data.experiences[3].entry }}</li>
       </ul>
-      <h2 class="cv-list-headline" role="label">Education</h2>
+      <h2 class="cv-list-headline" role="label">{{ data.educationHeadline }}</h2>
       <ul class="cv-list" aria-label="Education">
-        <li class="cv-list-item-headline"></li>
-        <li class="cv-list-item">Expected early 2026: Computer Science Expert - Subject Area: Software Development (IHK)</li>
-        <li class="cv-list-item">Bachelor of arts: Business administration (Nuremberg Institute of technology)</li>
+        <li class="cv-list-item">{{ data.degrees.degree1 }}</li>
+        <li class="cv-list-item">{{ data.degrees.degree2 }}</li>
       </ul>
-      <h2 class="cv-list-headline" role="label">Technologies</h2>
+      <h2 class="cv-list-headline" role="label">{{ data.technologiesHeadline }}</h2>
       <ul class="cv-list">
-        <li class="cv-list-item-headline"></li>
-        <li class="cv-list-item">Java</li>
-        <li class="cv-list-item">SQL</li>
-        <li class="cv-list-item">JavaScript / TypeScript</li>
-        <li class="cv-list-item">CSS / SCSS</li>
-        <li class="cv-list-item">HTML</li>
-        <li class="cv-list-item">Vue.js</li>
+        <li class="cv-list-item">{{ data.techologies.tech1 }}</li>
+        <li class="cv-list-item">{{ data.techologies.tech2 }}</li>
+        <li class="cv-list-item">{{ data.techologies.tech3 }}</li>
+        <li class="cv-list-item">{{ data.techologies.tech4 }}</li>
+        <li class="cv-list-item">{{ data.techologies.tech5 }}</li>
+        <li class="cv-list-item">{{ data.techologies.tech6 }}</li>
       </ul>
     </div>
 </template>

@@ -2,6 +2,7 @@
 import ProjectItem from './ProjectItem.vue'
 import { onMounted, defineProps } from 'vue'
 import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm'
+import data from '../assets/data.json';
 
 defineProps({
   fontColorSecondary: {
@@ -24,53 +25,38 @@ onMounted(() => {
       <ul class="glide__slides">
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Service Funnel Frontend</template>
-            <template #subline>Industry: Telecommunications</template>
-            Development of a microapp with the frontend framework Vue.js, JavaScript/TypeScript,
-            HTML and CSS/SCSS for a large german telecommunications company. The application enables
-            users to quickly find help on the company's website and thereby save service costs. The
-            application is highly animated and was implemented down to the smallest detail and in
-            close coordination with the customer.
+            <template #headline>{{ data.projects[0].headline }}</template>
+            <template #subline>{{ data.projects[0].subline }}</template>
+            {{ data.projects[0].description }}
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline
-              >Building Frontend Components for a CMS</template
-            >
-            <template #subline>Industry: Telecommunications</template>
-            Development of frontend components for a large german telecommunications company. As
-            part of an agile team, I worked as a frontend developer. The components were built with
-            the web component framework Lit, JavaScript/TypeScript, HTML and CSS/SCSS. I customized
-            the components exactly to the customer's wishes and highly animated some of them with
-            CSS.
+            <template #headline>{{ data.projects[1].headline }}</template>
+            <template #subline>{{ data.projects[1].subline }}</template>
+            {{ data.projects[1].description }}
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Automated user interface testing</template>
-            <template #subline>Industry: Travel / Softwaredevelopment</template>
-            For an in-house software of a software developer who specializes in solutions in the
-            tourism environment, I created automated user interface tests using the test software
-            QF-Test and also wrote scripts in Groovy.
+            <template #headline>{{ data.projects[2].headline }}</template>
+            <template #subline>{{ data.projects[2].subline }}</template>
+            {{ data.projects[2].description }}
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>Maintenance and testing of inhouse-software</template>
-            <template #subline>Industry: Public Service / Softwaredevelopment</template>
-            Development of automated unit tests for an existing in-house software in C#.
-            Additionally, I fixed bugs in the software reported by customers.
+            <template #headline>{{ data.projects[3].headline }}</template>
+            <template #subline>{{ data.projects[3].subline }}</template>
+            {{ data.projects[3].description }}
           </ProjectItem>
         </li>
         <li class="glide__slide">
           <ProjectItem>
-            <template #headline>This very website</template>
-            <template #subline>Home project</template>
-            <p>
-              This page was built with the frontend framework Vue.js using the new thirth version of
-              the framework.
-            </p>
+            <template #headline>{{ data.projects[4].headline }}</template>
+            <template #subline>{{ data.projects[4].subline }}</template>
+            {{ data.projects[4].description }}
+            <br />
             <br />
             <a href="https://github.com/juergenkaeser/cv_frontend" target="_blank"
               >Project on GitHub</a
