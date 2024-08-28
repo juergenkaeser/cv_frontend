@@ -59,7 +59,7 @@ onMounted(() => {
             <br />
             <br />
             <a href="https://github.com/juergenkaeser/cv_frontend" target="_blank"
-              >Project on GitHub</a
+              >Projekt auf GitHub</a
             >
           </ProjectItem>
         </li>

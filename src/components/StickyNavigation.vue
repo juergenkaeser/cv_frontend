@@ -56,7 +56,7 @@ function removeActiveClass() {
       ref="naviElement1"
       @click="setActiveClick(naviElement1, 'navi-1-click')"
     >
-      <p>Curriculum Vitae</p>
+      <p>Kenntnisse</p>
     </li>
     <li
       class="navigation-element"
