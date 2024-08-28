@@ -16,6 +16,7 @@ const projects = ref()
 const impressumHidden = ref(true)
 const activeComponent = ref('profile')
 const fontColorSecondary = ref('')
+const mobileViewHeight = ref(window.innerHeight)
 
 /* TODO: Make me work for A11Y
   const showImpressumBtn = ref()
@@ -32,6 +33,9 @@ onMounted(() => {
   observer.observe(me.value)
   observer.observe(cv.value)
   observer.observe(projects.value)
+
+  // set the height of the mobile view to fix issue with 100vh in mobile browsers
+  document.documentElement.style.setProperty('--mobile-view-height', `${mobileViewHeight.value}px`);
 })
 
 function naviClick(e) {
@@ -118,6 +122,7 @@ const observer = new IntersectionObserver(callback, {
   --navi-height-desktop: 40px;
   --font-size-navi-mobile: 12px;
   --font-size-navi-desktop: 16px;
+  --mobile-view-height: 50vh;
 }
 
 #app {
@@ -145,7 +150,11 @@ body,
 .profile,
 .cv,
 .projects {
-  height: 100vh;
+  height: var(--mobile-view-height);
+
+  @media (min-width: 768px) {
+    font-size: 100%;
+  }
 }
 
 .impressum-btn {
