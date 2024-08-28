@@ -3,7 +3,7 @@ import data from '../assets/data.json';
 </script>
 
 <template class="impressum-wrapper">
-    <p class="hide-impressum-btn" tabindex="0" role="button" @click="$emit('hide-impressum')">Zurück zum Profil</p>
+    <div class="hide-impressum-btn" tabindex="0" role="button" @click="$emit('hide-impressum')">Zurück zum Profil</div>
     <br />
     <h1>Impressum</h1>
     <p>Angaben gemäß § 5 DDG</p>
@@ -34,14 +34,11 @@ import data from '../assets/data.json';
 
 <style lang="scss">
 .hide-impressum-btn {
+    margin: 0 auto;
     width: fit-content;
-    padding: var(--spacing-m);
-    border: 1px solid var(--font-color-primary);
-    border-radius: var(--spacing-s);
 
     &:hover {
         cursor: pointer;
-        background-color: var(--font-color-secondary);
     }
 }
 </style>

@@ -203,9 +203,12 @@ p {
   }
 }
 
-a {
+a,
+.impressum-btn,
+.hide-impressum-btn {
   color: var(--font-color-secondary);
   border-radius: var(--spacing-s);
+  padding: var(--spacing-s);
 
   &:hover {
     background-color: var(--font-color-secondary-dark);
