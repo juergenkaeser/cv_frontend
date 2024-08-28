@@ -82,7 +82,7 @@ defineProps({
     max-width: 100%;
 
     @media (min-width: 768px) {
-      max-width: 40%;
+      max-width: 50%;
     }
 
     @media (min-width: 1200px) {
