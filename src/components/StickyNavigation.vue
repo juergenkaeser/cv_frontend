@@ -96,7 +96,7 @@ function removeActiveClass() {
   font-size: 100%;
   font-weight: bold;
   user-select: none;
-  padding: var(--spacing-s);
+  padding: var(--spacing-s) 0;
 
   @media (min-width: 768px) {
     padding: 6px;
