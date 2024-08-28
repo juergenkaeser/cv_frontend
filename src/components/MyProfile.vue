@@ -84,6 +84,10 @@ defineProps({
     @media (min-width: 768px) {
       max-width: 40%;
     }
+
+    @media (min-width: 1200px) {
+      max-width: 30%;
+    }
   }
 
   .profile__description-item {

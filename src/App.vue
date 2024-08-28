@@ -152,7 +152,15 @@ body,
   margin: 0 auto;
   margin-bottom: var(--spacing-s);
   width: fit-content;
-  font-size: 120%;
+  font-size: 80%;
+
+  @media (min-width: 420px) {
+    font-size: 90%;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 100%;
+  }
 
   &:hover {
     cursor: pointer;
@@ -175,14 +183,14 @@ li {
 
 li,
 p {
-  font-size: 90%;
+  font-size: 80%;
 
   @media (min-width: 420px) {
-    font-size: 100%;
+    font-size: 90%;
   }
 
   @media (min-width: 768px) {
-    font-size: 120%;
+    font-size: 100%;
   }
 }
 
@@ -200,5 +208,23 @@ h2,
 h3 {
   color: var(--font-color-secondary);
   font-weight: bold;
+}
+
+h1 {
+  @media (max-width: 420px) {
+    font-size: 140%;
+  }
+}
+
+h2 {
+  @media (max-width: 420px) {
+    font-size: 130%;
+  }
+}
+
+h3 {
+  @media (max-width: 420px) {
+    font-size: 120%;
+  }
 }
 </style>
