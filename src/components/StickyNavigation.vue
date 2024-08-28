@@ -99,7 +99,7 @@ function removeActiveClass() {
   padding: var(--spacing-s) 0;
 
   @media (min-width: 768px) {
-    padding: 6px;
+    padding: var(--spacing-m);
   }
 
   &:nth-child(2) {
