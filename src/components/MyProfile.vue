@@ -27,7 +27,7 @@ defineProps({
       </p>
     </div>
     <div class="github">
-      <p>Visit me on GitHub:</p>
+      <p>Besuchen Sie mich auf GitHub:</p>
       <br />
       <a href="https://github.com/juergenkaeser" target="_blank">
         <svg width="98" height="96" xmlns="http://www.w3.org/2000/svg">

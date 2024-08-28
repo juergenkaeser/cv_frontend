@@ -49,7 +49,7 @@ function removeActiveClass() {
       ref="naviElement0"
       @click="setActiveClick(naviElement0, 'navi-0-click')"
     >
-      <p>About me</p>
+      <p>Über mich</p>
     </li>
     <li
       class="navigation-element"
@@ -63,7 +63,7 @@ function removeActiveClass() {
       ref="naviElement2"
       @click="setActiveClick(naviElement2, 'navi-2-click')"
     >
-      <p>Projects</p>
+      <p>Projekte</p>
     </li>
   </ul>
 </template>

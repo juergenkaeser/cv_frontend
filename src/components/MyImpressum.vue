@@ -3,7 +3,7 @@ import data from '../assets/data.json';
 </script>
 
 <template class="impressum-wrapper">
-    <p class="hide-impressum-btn" tabindex="0" role="button" @click="$emit('hide-impressum')">Back to profile</p>
+    <p class="hide-impressum-btn" tabindex="0" role="button" @click="$emit('hide-impressum')">Zurück zum Profil</p>
     <br />
     <h1>Impressum</h1>
     <p>Angaben gemäß § 5 DDG</p>
