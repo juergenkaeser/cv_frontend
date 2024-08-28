@@ -105,14 +105,10 @@ const observer = new IntersectionObserver(callback, {
 <style lang="scss">
 :root {
   // TODO: Make breakpoint work in media-querys
-  --breakpoint-desktop: 768px;
   --bg-color: #110c17;
   --font-color-primary: #eefff7;
   --font-color-secondary: #27a48f;
   --font-color-secondary-dark: #413a49;
-  --font-size-1: 16px;
-  --font-size-2: 20px;
-  --font-size-3: 24px;
   --spacing-s: 4px;
   --spacing-m: 8px;
   --spacing-l: 16px;
@@ -120,9 +116,7 @@ const observer = new IntersectionObserver(callback, {
   --spacing-xxl: 80px;
   --navi-height-mobile: 28px;
   --navi-height-desktop: 40px;
-  --font-size-navi-mobile: 12px;
-  --font-size-navi-desktop: 16px;
-  --mobile-view-height: 50vh;
+  --mobile-view-height: 100vh;
 }
 
 #app {

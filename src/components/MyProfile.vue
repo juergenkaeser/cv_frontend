@@ -107,14 +107,6 @@ defineProps({
     a:hover {
       background-color: transparent;
     }
-
-    p {
-      opacity: 0;
-
-      @media (min-width: 768px) {
-        opacity: 1;
-      }
-    }
   }
 }
 </style>
