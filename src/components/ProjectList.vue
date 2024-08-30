@@ -1,7 +1,7 @@
 <script setup>
 import ProjectItem from './ProjectItem.vue'
 import { onMounted, defineProps } from 'vue'
-import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm'
+import Glide, { Controls, Swipe } from '@glidejs/glide/dist/glide.modular.esm'
 import data from '../assets/data.json';
 
 defineProps({
@@ -15,7 +15,7 @@ defineProps({
 onMounted(() => {
   new Glide('.glide', {
     type: 'carousel'
-  }).mount({ Controls })
+  }).mount({ Controls, Swipe })
 })
 </script>
 
