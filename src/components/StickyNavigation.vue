@@ -98,9 +98,10 @@ function removeActiveClass() {
   margin-bottom: 0;
   color: var(--font-color-primary);
   font-size: 100%;
-  font-weight: 600;
+  font-weight: bold;
   user-select: none;
   padding: var(--spacing-s) 0;
+  transition: color 0.3s ease;
 
   @media (min-width: 768px) {
     padding: var(--spacing-m);
