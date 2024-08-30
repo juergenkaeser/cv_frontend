@@ -94,12 +94,11 @@ function removeActiveClass() {
 .navigation-element {
   width: calc(100% / 3);
   text-align: center;
-  background-color: inherit;
   transition: background-color 200ms ease-in-out;
   margin-bottom: 0;
   color: var(--font-color-primary);
   font-size: 100%;
-  font-weight: bold;
+  font-weight: 600;
   user-select: none;
   padding: var(--spacing-s) 0;
 
@@ -108,17 +107,17 @@ function removeActiveClass() {
   }
 
   &:nth-child(2) {
-    border-left: 1px solid var(--font-color-primary);
-    border-right: 1px solid var(--font-color-primary);
+    border-left: 2px solid var(--font-color-primary);
+    border-right: 2px solid var(--font-color-primary);
   }
 
   &.active {
-    background-color: var(--font-color-secondary);
+    color: var(--font-color-secondary);
   }
 
   &:hover {
     cursor: pointer;
-    background-color: var(--font-color-secondary);
+    color: var(--font-color-secondary);
   }
 
   p {

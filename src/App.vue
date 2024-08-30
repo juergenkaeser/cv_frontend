@@ -110,7 +110,7 @@ function addObserver() {
   // TODO: Make breakpoint work in media-querys
   --bg-color: #110c17;
   --font-color-primary: #eefff7;
-  --font-color-secondary: #27a48f;
+  --font-color-secondary: #3bd4bb;
   --font-color-secondary-dark: #413a49;
   --spacing-s: 4px;
   --spacing-m: 8px;
@@ -203,12 +203,13 @@ p {
 a,
 .impressum-btn,
 .hide-impressum-btn {
-  color: var(--font-color-secondary);
+  color: var(--font-color-primary);
   border-radius: var(--spacing-s);
   padding: var(--spacing-s);
 
   &:hover {
     background-color: var(--font-color-secondary-dark);
+    color: var(--font-color-secondary);
   }
 }
 
