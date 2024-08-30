@@ -1,7 +1,7 @@
 <script setup>
 import data from '../assets/data.json'
 
-const emit = defineEmits(['hide-impressum'])
+defineEmits(['hide-impressum'])
 </script>
 
 <template class="impressum-wrapper">
