@@ -108,10 +108,10 @@ function addObserver() {
 <style lang="scss">
 :root {
   // TODO: Make breakpoint work in media-querys
-  --bg-color: #110c17;
+  --bg-color: #16161d;
   --font-color-primary: #eefff7;
   --font-color-secondary: #3bd4bb;
-  --font-color-secondary-dark: #413a49;
+  --font-color-secondary-dark: #333238;
   --spacing-s: 4px;
   --spacing-m: 8px;
   --spacing-l: 16px;
@@ -130,7 +130,7 @@ function addObserver() {
 body,
 #app {
   margin: 0;
-  background-color: var(--bg-color);
+  background-image: linear-gradient(var(--bg-color), var(--bg-color), var(--font-color-secondary-dark));
   color: var(--font-color-primary);
 }
 
