@@ -8,7 +8,7 @@ const props = defineProps({
 });
 
 // TODO: change other emits like that
-const emit = defineEmits(['navi-0-click', 'navi-1-click', 'navi-2-click'])
+const emit = defineEmits(['navi-0-click', 'navi-1-click', 'navi-2-click', 'navi-mounted'])
 const naviElement0 = ref()
 const naviElement1 = ref()
 const naviElement2 = ref()
@@ -24,6 +24,11 @@ onMounted(() => {
       document.getElementsByClassName("navigation-element")[2].classList.add("active")
     }
  });
+
+ // navi gets mounted every time the other components get mounted
+ // fixes issue with intersection observer missing after impressum is shown
+ // replaces the observe function call in App.vues onMounted
+ emit('navi-mounted')
 })
 
 function setActiveClick(e, eventName) {

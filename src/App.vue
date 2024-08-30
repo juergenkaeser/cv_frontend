@@ -30,10 +30,6 @@ const mobileViewHeight = ref(window.innerHeight)
   }) */
 
 onMounted(() => {
-  observer.observe(me.value)
-  observer.observe(cv.value)
-  observer.observe(projects.value)
-
   // set the height of the mobile view to fix issue with 100vh in mobile browsers
   document.documentElement.style.setProperty('--mobile-view-height', `${mobileViewHeight.value}px`);
 })
@@ -66,6 +62,12 @@ const callback = (entries) => {
 const observer = new IntersectionObserver(callback, {
   threshold: 0.6
 })
+
+function addObserver() {
+  observer.observe(me.value)
+  observer.observe(cv.value)
+  observer.observe(projects.value)
+}
 </script>
 
 <template>
@@ -75,6 +77,7 @@ const observer = new IntersectionObserver(callback, {
         @navi-0-click="naviClick(me)"
         @navi-1-click="naviClick(cv)"
         @navi-2-click="naviClick(projects)"
+        @navi-mounted="addObserver()"
         :activeComponent="activeComponent"
       />
       <div class="profile" ref="me">
