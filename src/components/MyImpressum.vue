@@ -5,6 +5,7 @@ defineEmits(['hide-impressum'])
 </script>
 
 <template class="impressum-wrapper">
+    <br />
     <div class="hide-impressum-btn" tabindex="0" role="button" @click="$emit('hide-impressum')">Zurück zum Profil</div>
     <br />
     <h1>Impressum</h1>
