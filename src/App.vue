@@ -7,7 +7,9 @@ import Impressum from './components/MyImpressum.vue'
 import { ref, onBeforeMount, onMounted } from 'vue'
 
 onBeforeMount(() => {
-  fontColorSecondary.value = getComputedStyle(document.body).getPropertyValue('--font-color-secondary')
+  fontColorSecondary.value = getComputedStyle(document.body).getPropertyValue(
+    '--font-color-secondary'
+  )
 })
 
 const me = ref()
@@ -31,7 +33,7 @@ const mobileViewHeight = ref(window.innerHeight)
 
 onMounted(() => {
   // set the height of the mobile view to fix issue with 100vh in mobile browsers
-  document.documentElement.style.setProperty('--mobile-view-height', `${mobileViewHeight.value}px`);
+  document.documentElement.style.setProperty('--mobile-view-height', `${mobileViewHeight.value}px`)
 })
 
 function naviClick(e) {
@@ -108,10 +110,10 @@ function addObserver() {
 <style lang="scss">
 :root {
   // TODO: Make breakpoint work in media-querys
-  --bg-color: #16161d;
+  --bg-color: #18181b;
   --font-color-primary: #eefff7;
-  --font-color-secondary: #3bd4bb;
-  --font-color-secondary-dark: #333238;
+  --font-color-secondary: #3bd8b6;
+  --font-color-secondary-dark: #51505a;
   --spacing-s: 4px;
   --spacing-m: 8px;
   --spacing-l: 16px;
@@ -130,7 +132,11 @@ function addObserver() {
 body,
 #app {
   margin: 0;
-  background-image: linear-gradient(var(--bg-color), var(--bg-color), var(--font-color-secondary-dark));
+  background-image: linear-gradient(
+    var(--bg-color),
+    var(--bg-color),
+    var(--font-color-secondary-dark)
+  );
   color: var(--font-color-primary);
 }
 
@@ -189,14 +195,10 @@ li {
 
 li,
 p {
-  font-size: 80%;
-
-  @media (min-width: 420px) {
-    font-size: 90%;
-  }
+  font-size: 90%;
 
   @media (min-width: 768px) {
-    font-size: 100%;
+    font-size: 110%;
   }
 }
 
@@ -208,7 +210,7 @@ a,
   padding: var(--spacing-s);
 
   &:hover {
-    background-color: var(--font-color-secondary-dark);
+    background-color: transparent;
     color: var(--font-color-secondary);
   }
 }

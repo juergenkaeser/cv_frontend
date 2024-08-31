@@ -100,11 +100,11 @@ function removeActiveClass() {
   font-size: 100%;
   font-weight: bold;
   user-select: none;
-  padding: var(--spacing-s) 0;
+  padding: 3px 0;
   transition: color 0.3s ease;
 
   @media (min-width: 768px) {
-    padding: var(--spacing-m);
+    padding: 7px 0;
   }
 
   &:nth-child(2) {
