@@ -46,15 +46,19 @@ defineProps({
 <style lang="scss">
 .background-container {
   position: relative;
+  background: rgba(0, 0, 0, 0.8) url('../assets/lake-view.JPG');
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   height: 100%;
   padding: var(--spacing-s);
 
+  @media (max-width: 768px) {
+    background: transparent;
+  }
+
   @media (min-width: 768px) {
     padding: var(--spacing-l);
-    background: rgba(0, 0, 0, 0.8) url('../assets/lake-view.JPG');
   }
 
   .profile__name,
