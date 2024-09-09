@@ -144,8 +144,6 @@ defineProps({
   }
 
   .links {
-    display: flex;
-    justify-content: center;
     margin-top: var(--spacing-m);
 
     @media (min-width: 768px) {

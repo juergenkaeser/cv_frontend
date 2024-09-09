@@ -108,8 +108,8 @@ function removeActiveClass() {
   }
 
   &:nth-child(2) {
-    border-left: 2px solid var(--font-color-primary);
-    border-right: 2px solid var(--font-color-primary);
+    border-left: 2px solid var(--bg-color);
+    border-right: 2px solid var(--bg-color);
   }
 
   &.active {

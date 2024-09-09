@@ -115,7 +115,7 @@ function addObserver() {
   --bg-color: #18181b;
   --font-color-primary: #eefff7;
   --font-color-secondary: #3bd8b6;
-  --font-color-secondary-dark: #51505a;
+  --font-color-secondary-dark: #282633;
   --spacing-s: 4px;
   --spacing-m: 8px;
   --spacing-l: 16px;
@@ -153,7 +153,7 @@ body,
 .profile,
 .cv,
 .projects {
-  border-top: 1px solid var(--font-color-primary);
+  border-top: 1px solid var(--bg-color);
 
   @media (min-width: 768px) {
     font-size: 100%;
@@ -236,6 +236,7 @@ h3 {
 h1 {
   display: flex;
   justify-content: center;
+  font-style: italic;
   margin-bottom: var(--spacing-l);
 
   @media (max-width: 420px) {
@@ -259,10 +260,5 @@ h3 {
   @media (max-width: 420px) {
     font-size: 120%;
   }
-}
-
-h4 {
-  display: flex;
-  justify-content: center;
 }
 </style>
