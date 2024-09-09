@@ -1,11 +1,11 @@
 <template>
   <div class="project-item">
-    <h2 class="project-item__headline">
+    <h3 class="project-item__headline">
       <slot name="headline"></slot>
-    </h2>
-    <h3 class="project-item__subline">
-      <slot name="subline"></slot>
     </h3>
+    <h4 class="project-item__subline">
+      <slot name="subline"></slot>
+    </h4>
     <p class="project-item__content">
       <slot></slot>
     </p>

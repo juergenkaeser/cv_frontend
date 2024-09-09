@@ -21,6 +21,7 @@ onMounted(() => {
 
 <template>
   <div class="glide">
+    <h2 class="projects__title">Projekte</h2>
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
         <li class="glide__slide">
@@ -112,6 +113,15 @@ onMounted(() => {
 
 .glide {
   height: 100%;
+  padding: var(--spacing-xl) var(--spacing-l);
+
+  @media (min-width: 768px) {
+    padding: var(--spacing-xxl) var(--spacing-l) var(--spacing-xxl) var(--spacing-l);
+  }
+
+  .projects__title {
+    margin-bottom: 0;
+  }
 
   .glide__track {
     height: 100%;
@@ -139,7 +149,7 @@ onMounted(() => {
       justify-content: space-between;
 
       @media (min-width: 768px) {
-        bottom: 25%;
+        bottom: 10%;
         width: 25%;
       }
 

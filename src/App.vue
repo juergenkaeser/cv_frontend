@@ -91,14 +91,16 @@ function addObserver() {
       <div class="projects" ref="projects">
         <ProjectList :fontColorSecondary="fontColorSecondary" />
       </div>
-      <div
-        class="impressum-btn"
-        tabindex="0"
-        ref="showImpressumBtn"
-        role="button"
-        @click="showImpressum()"
-      >
-        Impressum
+      <div class="impressum-btn-wrapper">
+        <div
+          class="impressum-btn"
+          tabindex="0"
+          ref="showImpressumBtn"
+          role="button"
+          @click="showImpressum()"
+        >
+          Impressum
+        </div>
       </div>
     </div>
     <div class="impressum" ref="impressum" v-else>
@@ -121,7 +123,7 @@ function addObserver() {
   --spacing-xxl: 80px;
   --navi-height-mobile: 28px;
   --navi-height-desktop: 40px;
-  --mobile-view-height: 100vh;
+  --mobile-view-height: 100vh; // height gets calculated
 }
 
 #app {
@@ -132,17 +134,11 @@ function addObserver() {
 body,
 #app {
   margin: 0;
-  background-image: linear-gradient(
-    var(--bg-color),
-    var(--bg-color),
-    var(--font-color-secondary-dark)
-  );
+  background: var(--bg-color);
   color: var(--font-color-primary);
 }
 
-.profile,
-.cv,
-.projects {
+.profile {
   padding-top: var(--navi-height-mobile);
 
   @media (min-width: 768px) {
@@ -150,32 +146,47 @@ body,
   }
 }
 
+.projects {
+  height: 100vh;
+}
+
 .profile,
 .cv,
 .projects {
-  height: var(--mobile-view-height);
+  border-top: 1px solid var(--font-color-primary);
 
   @media (min-width: 768px) {
     font-size: 100%;
   }
 }
 
-.impressum-btn {
-  margin: 0 auto;
-  margin-bottom: var(--spacing-s);
-  width: fit-content;
-  font-size: 80%;
+.impressum-btn-wrapper {
+  position: relative;
+  height: 10vh;
 
-  @media (min-width: 420px) {
-    font-size: 90%;
-  }
+  .impressum-btn {
+    position: absolute;
+    bottom: var(--spacing-l);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-s);
+    width: fit-content;
+    font-size: 80%;
 
-  @media (min-width: 768px) {
-    font-size: 100%;
-  }
+    @media (min-width: 420px) {
+      font-size: 90%;
+    }
 
-  &:hover {
-    cursor: pointer;
+    @media (min-width: 768px) {
+      font-size: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -205,12 +216,12 @@ p {
 a,
 .impressum-btn,
 .hide-impressum-btn {
-  color: var(--font-color-primary);
+  color: var(--font-color-secondary);
   border-radius: var(--spacing-s);
   padding: var(--spacing-s);
 
   &:hover {
-    background-color: transparent;
+    background-color: var(--font-color-secondary-dark);
     color: var(--font-color-secondary);
   }
 }
@@ -223,14 +234,24 @@ h3 {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-l);
+
   @media (max-width: 420px) {
     font-size: 140%;
+    margin-bottom: var(--spacing-s);
   }
 }
 
 h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-l);
+
   @media (max-width: 420px) {
     font-size: 130%;
+    margin-bottom: var(--spacing-s);
   }
 }
 
@@ -238,5 +259,10 @@ h3 {
   @media (max-width: 420px) {
     font-size: 120%;
   }
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
 }
 </style>

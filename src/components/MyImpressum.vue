@@ -44,4 +44,10 @@ defineEmits(['hide-impressum'])
         cursor: pointer;
     }
 }
+
+.impressum {
+    h1, h2, h3, h4 {
+        display: block;
+    }
+}
 </style>
