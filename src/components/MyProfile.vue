@@ -14,7 +14,7 @@ defineProps({
 <template>
   <div class="background-container">
     <h1 class="profile__title">Portfolio von {{ data.firstName }} {{ data.lastName }}</h1>
-    <h2 class="profile__title">Über mich</h2>
+    <h2 class="profile__title-underline">Über mich</h2>
     <h3 class="profile__name">{{ data.firstName }} {{ data.lastName }}</h3>
     <p class="profile__profession">{{ data.jobDescription }} aus {{ data.city }}</p>
     <div class="profile__description-wrapper">
@@ -150,9 +150,14 @@ defineProps({
       margin-top: var(--spacing-l);
     }
 
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+
     a {
       &:not(:last-child) {
-        margin-right: var(--spacing-m);
+        margin-right: var(--spacing-s);
 
         @media (min-width: 768px) {
           margin-right: var(--spacing-l);

@@ -114,8 +114,8 @@ function addObserver() {
   // TODO: Make breakpoint work in media-querys
   --bg-color: #18181b;
   --font-color-primary: #eefff7;
-  --font-color-secondary: #4bc4d4;
-  --font-color-secondary-dark: #39374a;
+  --font-color-secondary: #4dde96;
+  --font-color-secondary-dark: #424053;
   --spacing-s: 4px;
   --spacing-m: 8px;
   --spacing-l: 16px;
@@ -174,15 +174,6 @@ body,
     margin: 0 auto;
     margin-bottom: var(--spacing-s);
     width: fit-content;
-    font-size: 80%;
-
-    @media (min-width: 420px) {
-      font-size: 90%;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 100%;
-    }
 
     &:hover {
       cursor: pointer;
@@ -191,10 +182,10 @@ body,
 }
 
 .impressum {
-  padding: var(--spacing-s);
+  padding: var(--spacing-l);
 
   @media (min-width: 768px) {
-    padding: var(--spacing-l);
+    padding: var(--spacing-xl);
   }
 }
 
@@ -219,6 +210,7 @@ a,
   color: var(--font-color-secondary);
   border-radius: var(--spacing-s);
   padding: var(--spacing-s);
+  font-size: 15px;
 
   &:hover {
     background-color: var(--font-color-secondary-dark);
@@ -238,6 +230,7 @@ h1 {
   justify-content: center;
   font-style: italic;
   margin-bottom: var(--spacing-l);
+  color: var(--font-color-primary);
 
   @media (max-width: 420px) {
     font-size: 140%;
